@@ -1,0 +1,84 @@
+!
+! Title: Personal DNS Filter 
+! Description: 
+! Homepage: https://github.com/finallycometolife
+! License: 
+! Last modified: 2023-02-04
+
+! [KaKao, Daum Service]
+@@||aem-collector.daumkakao.io^
+@@||stat.tiara.kakao.com^
+@@||stat.tiara.daum.net^
+@@||kakaocdn.net^
+@@||movie.daum.net^
+@@||videostats.kakao.com^
+!
+||*.ad.daum.net^
+||*.ad.kakao.com^
+||*.ad.kakaocorp.com^
+||*.ds.kakao.com^
+||ad.*.net^
+||ad.kakao.com^
+||adclix.*.net^
+||adclixad.*.net^
+||adfit.*.com^
+||adimg.*.net^
+||adserver.*.kakao.com^
+||daumkakao-smr.smartmediarep.com^
+||ka.*.daum.net^
+||tr.*.daum.net^
+||vads-api.daumkakao.com^
+
+! [Google]
+@@||lh3.googleusercontent.com^
+@@||tpc.googlesyndication.com^
+!
+||ads.google.com^
+||adservice.google.co.kr^
+||adservice.google.com.tw^
+||adservice.google.com^
+||adservice.google.tw^
+||adservices.google.com^
+||doubleclick.net^
+||*.doubleclick.net^
+||*.*.doubleclick.net^
+||googleadservices.com^
+||*.googleadservices.com^
+||googleads.g.doubleclick.net^
+||pagead.*.google.com^
+||partnerad.*.google.com^
+
+! [Samsung Game Optimized System]
+@@||*.ospserver.net^
+@@||*.samsungdm.com^
+!
+||api.glb.samsung-gamelauncher.com^
+||samsung-gamelauncher.com^
+||gos-api.gos-gsp.io^
+||gos-gsp.io^
+
+! [Naver]
+@@||*.nil.naver.com^
+@@||l.m.naver.com^
+@@||lcs.naver.com^
+@@||nid.naver.com^
+@@||sp.naver.com^
+!
+||*.ad.naver.com^
+||*.impression-neo.naver.com^
+||*.tivan.naver.com^
+||ad.*.naver.com^
+||adcr.naver.com^
+||adlog.shopping.naver.com^
+||naverpa-phinf.pstatic.net^
+||siape.veta.naver.com^
+||smrmembers-smr.smartmediarep.com^
+||tivan.naver.com^
+||tvetamovie.pstatic.net^
+||mts.naver.com^
+
+! [Extra]
+||g.galleryapi.micloud.xiaomi.net^
+||us.find.api.micloud.xiaomi.net^
+||i.mi.com^
+||graph.facebook.com^$app=com.nbdproject.macarong
