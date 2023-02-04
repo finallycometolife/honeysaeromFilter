@@ -1,6 +1,6 @@
 !
-! Title: Adblock-Whitelist-User-Rules
-! Description: 
+! Title: honeysaerom kor filter
+! Description: Korean Sites Filter that whitelist, anti adblock, etc.
 ! Homepage: https://github.com/finallycometolife
 ! License: 
 ! Last modified: 2023-02-04
