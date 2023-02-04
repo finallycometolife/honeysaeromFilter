@@ -24,12 +24,19 @@ m.fmkorea.com##div[style='margin:-5px 0 0; max-width:100%; overflow-x:scroll; ov
 ||ad.everytime.kr^
 ||ad.idnad.co.kr/ad/idn.js^
  
-! [DCinside]
+! [DCINSIDE]
 @@||json.dcinside.com/*/app_ad_setting.php^
 @@||json2.dcinside.com/json0/app_ad_setting.php^
 @@||app.dcinside.com/api/_ad_search_link*.php^
 @@||m.dcinside.com^$domain=m.dcinside.com,app=com.naver.whale
 @@||json.dcinside.com/json0/app_ad_setting.php
+@@||dcimg2.dcinside.co.kr
+@@||dcimg3.dcinside.co.kr
+@@||dcimg5.dcinside.com
+@@||dcimg6.dcinside.co.kr
+@@||dcimg7.dcinside.co.kr
+@@||dcimg8.dcinsdie.co.kr
+@@||dccdn11.dcinside.co.kr
 !
 dcinside.com##.block-disable
 gall.dcinside.com##.kakao_ad_area
