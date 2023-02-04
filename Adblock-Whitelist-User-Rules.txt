@@ -1,4 +1,11 @@
-!-- 사이트별 커스텀 규칙 --!
+!
+! Title: Adblock-Whitelist-User-Rules
+! Description: 
+! Homepage: https://github.com/finallycometolife
+! License: 
+! Last modified: 2023-02-04
+
+! [Custom WebPages Anti Adblock and Adblock Rules]
 @@||cdn.011st.com^$domain=m.11st.co.kr
 @@||image.fomos.kr/contents/images^$app=com.naver.whale
 @@||lcs.naver.com^$app=com.nhn.android.navercafe
@@ -9,7 +16,7 @@
 @@||play.google.com^$important,document
 @@||www.adobe.com^$important,document
 @@||weverse.io^$important,document
-
+!
 m.fmkorea.com##div[style='margin:-5px 0 0; max-width:100%; overflow-x:scroll; overflow-y:hidden;']
 ||naverwebtoon-phinf.pstatic.net^
 ||cc.naver.com^$app=com.nhn.android.webtoon
@@ -17,27 +24,27 @@ m.fmkorea.com##div[style='margin:-5px 0 0; max-width:100%; overflow-x:scroll; ov
 ||ad.everytime.kr^
 ||ad.idnad.co.kr/ad/idn.js^
  
-!-- 디시인사이드 --!
+! [DCinside]
 @@||json.dcinside.com/*/app_ad_setting.php^
 @@||json2.dcinside.com/json0/app_ad_setting.php^
 @@||app.dcinside.com/api/_ad_search_link*.php^
 @@||m.dcinside.com^$domain=m.dcinside.com,app=com.naver.whale
 @@||json.dcinside.com/json0/app_ad_setting.php
-
+!
 dcinside.com##.block-disable
 gall.dcinside.com##.kakao_ad_area
 gall.dcinside.com##tr.ub-content:nth-of-type(1)
  
-!-- 삼성 --!
+! [Samsung Apps]
 @@||*.ospserver.net^
 @@||*.samsungdm.com^
-
+!
 ||api.glb.samsung-gamelauncher.com^
 ||samsung-gamelauncher.com^
 ||gos-api.gos-gsp.io^
 ||gos-gsp.io^
  
-!-- 네이버 --!
+! [Naver]
 @@||wcs.naver.net^
 @@||ace.naver.com^
 @@||ipada.cafe.naver.com^
@@ -50,7 +57,7 @@ gall.dcinside.com##tr.ub-content:nth-of-type(1)
 @@||s.pstatic.net^
 @@||sp.naver.com^
 @@||ssl.pstatic.net^
-
+!
 ||*.ad.naver.com^$important
 ||*.nbms.naver.com^
 ||*.tivan.naver.com^
@@ -89,7 +96,7 @@ m.naver.com##.ly_change_newmain
 m.naver.com##.id_cui_airsguide
 m.naver.com##.MM_CHANNEL_BOTTOM_BANNER
  
-!-- 카카오, 다음 --!
+! [KaKao, Daum]
 @@||*.tiara.kakao.com^
 @@||*.tiara.daum.net^
 @@||kauth.kakao.com^
@@ -107,7 +114,7 @@ m.naver.com##.MM_CHANNEL_BOTTOM_BANNER
 @@||[2404:4600:9:8158:211:249:242:51]:10009^
 @@||[2404:4600:9:815a:211:249:242:111]:10009^
 @@||121.53.205.66:1009^
-
+!
 ||*.ad.kakao.com^
 ||*.ad.kakaocorp.com^
 ||*.ds.kakao.com^
@@ -132,7 +139,7 @@ tistory.com##.adfit.revenue_unit_item
 tistory.com##.kakao_ad_area
 tistory.com##.revenue_unit_wrap
  
-!-- 아프리카 TV --!
+! [Afreeca TV]
 ||admvod.afreecatv.com^
 ||deapi.afreecatv.com^
 ||cache.m.afreecatv.com/application/theme^
@@ -145,7 +152,7 @@ play.afreecatv.com##.adshop_layer
 ||vod-player002.afreecatv.com^
 ||vod-player003.afreecatv.com^
  
-!-- 웹툰 사이트 --!
+! [Webtoon Sites]
 ||toonkor*.*/*/tk_logo*
 ||toonkor*.*/*/*.gif$image
 ||toonkor*.*/images/*.jpg$image
