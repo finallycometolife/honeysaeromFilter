@@ -43,11 +43,11 @@ gall.dcinside.com##DIV[class="rightbanner"]
 gall.dcinside.com##LI[class="ub-content dory"]
 ! ---
 
-@@||json.dcinside.com/*/app_ad_setting.php^
-@@||json2.dcinside.com/json0/app_ad_setting.php^
-@@||app.dcinside.com/api/_ad_search_link*.php^
+@@||json.dcinside.com/*/app_ad_setting.php^$app=com.naver.whale
+@@||json2.dcinside.com/json0/app_ad_setting.php^$app=com.naver.whale
+@@||app.dcinside.com/api/_ad_search_link*.php^$app=com.naver.whale
 @@||m.dcinside.com^$domain=m.dcinside.com,app=com.naver.whale
-@@||json.dcinside.com/json0/app_ad_setting.php
+@@||json.dcinside.com/json0/app_ad_setting.php^$app=com.naver.whale
 @@||dcimg2.dcinside.co.kr
 @@||dcimg3.dcinside.co.kr
 @@||dcimg5.dcinside.com
@@ -55,12 +55,12 @@ gall.dcinside.com##LI[class="ub-content dory"]
 @@||dcimg7.dcinside.co.kr
 @@||dcimg8.dcinsdie.co.kr
 @@||dccdn11.dcinside.co.kr
-@@||json2.dcinside.com
-@@||json2.dcinside.com.wtxcdn.com
-@@||upload.dcinside.com
-@@||dcid.dcinside.com
-@@||nstatic.dcinside.com
-@@||wstatic.dcinside.com
+@@||json2.dcinside.com^$app=com.naver.whale
+@@||json2.dcinside.com.wtxcdn.com^$app=com.naver.whale
+@@||upload.dcinside.com^$app=com.naver.whale
+@@||dcid.dcinside.com^$app=com.naver.whale
+@@||nstatic.dcinside.com^$app=com.naver.whale
+@@||wstatic.dcinside.com^$app=com.naver.whale
 !
 dcinside.com##.block-disable
 gall.dcinside.com##.kakao_ad_area
