@@ -3,7 +3,7 @@
 ! Description: Korean Sites Filter that whitelist, anti adblock, etc.
 ! Homepage: https://github.com/finallycometolife
 ! License: 
-! Last modified: 2023-02-07
+! Last modified: 2023-02-08
 
 ! [Custom WebPages Anti Adblock and Adblock Rules]
 @@||cdn.011st.com^$domain=m.11st.co.kr
@@ -36,13 +36,6 @@ m.fmkorea.com##div[style='margin:-5px 0 0; max-width:100%; overflow-x:scroll; ov
 ||nstatic.dcinside.com/dgn/gallery/js/panda_tv.js^$domain=dcinside.com,app=com.dcinside.app.android
 ||wiki.dcinside.com/main_top_realclick_banner.php^$domain=wiki.dcinside.com,app=com.dcinside.app.android
 !
-gall.dcinside.com##DIV[id="ad_floating"]
-gall.dcinside.com##DIV[class="stickyunit"]
-gall.dcinside.com##DIV[class="ad_bottom_list"]
-gall.dcinside.com##DIV[class="rightbanner"]
-gall.dcinside.com##LI[class="ub-content dory"]
-! ---
-
 @@||json.dcinside.com/*/app_ad_setting.php^$app=com.naver.whale
 @@||json2.dcinside.com/json0/app_ad_setting.php^$app=com.naver.whale
 @@||app.dcinside.com/api/_ad_search_link*.php^$app=com.naver.whale
