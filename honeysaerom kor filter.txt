@@ -25,6 +25,24 @@ m.fmkorea.com##div[style='margin:-5px 0 0; max-width:100%; overflow-x:scroll; ov
 ||ad.idnad.co.kr/ad/idn.js^
  
 ! [DCINSIDE]
+
+! --- TEST
+||addc.dcinside.com^$app=com.dcinside.app.android
+||app.dcinside.com/api/_ad_search_link*.php^$app=com.dcinside.app.android
+||gall.dcinside.com/_js/ad.js^$app=com.dcinside.app.android
+||gall.dcinside.com/dc_ad_*_JH.php^$app=com.dcinside.app.android
+||json2.dcinside.com/json1/comment_boy_v*.php^$domain=m.dcinside.com,app=com.dcinside.app.android
+||json2.dcinside.com/json0/app_ad_setting.php^$app=com.dcinside.app.android
+||nstatic.dcinside.com/dgn/gallery/js/panda_tv.js^$domain=dcinside.com,app=com.dcinside.app.android
+||wiki.dcinside.com/main_top_realclick_banner.php^$domain=wiki.dcinside.com,app=com.dcinside.app.android
+!
+gall.dcinside.com##DIV[id="ad_floating"]
+gall.dcinside.com##DIV[class="stickyunit"]
+gall.dcinside.com##DIV[class="ad_bottom_list"]
+gall.dcinside.com##DIV[class="rightbanner"]
+gall.dcinside.com##LI[class="ub-content dory"]
+! ---
+
 @@||json.dcinside.com/*/app_ad_setting.php^
 @@||json2.dcinside.com/json0/app_ad_setting.php^
 @@||app.dcinside.com/api/_ad_search_link*.php^
