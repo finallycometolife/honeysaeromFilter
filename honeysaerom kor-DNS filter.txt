@@ -12,6 +12,7 @@
 @@||kakaocdn.net^
 @@||movie.daum.net^
 @@||videostats.kakao.com^
+@@
 !
 ||*.ad.daum.net^
 ||*.ad.kakao.com^
