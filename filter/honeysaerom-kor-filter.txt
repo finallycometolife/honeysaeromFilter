@@ -5,7 +5,7 @@
 ! License: 
 ! Last modified: 2023-02-08
 
-! [Custom WebPages Anti Adblock and Adblock Rules]
+! [Custom WebPages Adblock Rules]
 @@||cdn.011st.com^$domain=m.11st.co.kr
 @@||image.fomos.kr/contents/images^$app=com.naver.whale
 @@||lcs.naver.com^$app=com.nhn.android.navercafe
@@ -16,6 +16,8 @@
 @@||play.google.com^$important,document
 @@||www.adobe.com^$important,document
 @@||weverse.io^$important,document
+@@||us.account.samsung.com^$important,document
+@@||www.notion.so^$important,document
 !
 m.fmkorea.com##div[style='margin:-5px 0 0; max-width:100%; overflow-x:scroll; overflow-y:hidden;']
 ||naverwebtoon-phinf.pstatic.net^
@@ -25,8 +27,6 @@ m.fmkorea.com##div[style='margin:-5px 0 0; max-width:100%; overflow-x:scroll; ov
 ||ad.idnad.co.kr/ad/idn.js^
  
 ! [DCINSIDE]
-
-! --- TEST
 ||addc.dcinside.com^$app=com.dcinside.app.android
 ||app.dcinside.com/api/_ad_search_link*.php^$app=com.dcinside.app.android
 ||gall.dcinside.com/_js/ad.js^$app=com.dcinside.app.android
