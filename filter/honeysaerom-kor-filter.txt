@@ -18,6 +18,8 @@
 @@||weverse.io^$important,document
 @@||us.account.samsung.com^$important,document
 @@||www.notion.so^$important,document
+@@||ezgif.com^$important,document
+@@||openai.com^$important,document
 !
 m.fmkorea.com##div[style='margin:-5px 0 0; max-width:100%; overflow-x:scroll; overflow-y:hidden;']
 ||naverwebtoon-phinf.pstatic.net^
