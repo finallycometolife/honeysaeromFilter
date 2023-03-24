@@ -1,6 +1,6 @@
 !
 ! Title: honeysaerom kor-DNS filter
-! Description: Korean Sites DNS filterling
+! Description: 대한민국 사이트 위주 DNS 필터링 Korean Sites DNS filterling
 ! Homepage: https://github.com/finallycometolife
 ! License: 
 ! Last modified: 2023-02-07
