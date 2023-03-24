@@ -1,11 +1,11 @@
 !
 ! Title: honeysaerom kor filter
-! Description: Korean Sites Filter that whitelist, anti adblock, etc.
+! Description: 대한민국 사이트 위주 광고 차단 필터 Korean Sites Filter that whitelist, anti adblock, etc.
 ! Homepage: https://github.com/finallycometolife
 ! License: 
-! Last modified: 2023-02-10
+! Last modified: 2023-03-24
 
-! [Custom WebPages Adblock Rules]
+! [Anti-Adblock Rules + Adblock Rules]
 @@||cdn.011st.com^$domain=m.11st.co.kr
 @@||image.fomos.kr/contents/images^$app=com.naver.whale
 @@||lcs.naver.com^$app=com.nhn.android.navercafe
@@ -20,6 +20,7 @@
 @@||www.notion.so^$important,document
 @@||ezgif.com^$important,document
 @@||openai.com^$important,document
+@@||music.apple.com^$important,document
 !
 m.fmkorea.com##div[style='margin:-5px 0 0; max-width:100%; overflow-x:scroll; overflow-y:hidden;']
 ||naverwebtoon-phinf.pstatic.net^
