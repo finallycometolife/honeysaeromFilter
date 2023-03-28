@@ -3,7 +3,7 @@
 ! Description: 대한민국 사이트 위주 광고 차단 필터 Korean Sites Filter that whitelist, anti adblock, etc.
 ! Homepage: https://github.com/finallycometolife
 ! License: 
-! Last modified: 2023-03-24
+! Last modified: 2023-03-28
 
 ! [Anti-Adblock Rules + Adblock Rules]
 @@||cdn.011st.com^$domain=m.11st.co.kr
@@ -201,3 +201,258 @@ com##[href="/bz"]
 com##footer > .group > nav
 com##.pn-ProductNav_Wrapper
 com##li.n2.close-sb:nth-of-type(7)
+
+! [News Sites]
+sundaynewsusa.com##.td-is-sticky.td-pb-span4.tdc-column.vc_column_container.wpb_column.tdi_121.vc_column
+||cdn.emetro.co.kr/*banner
+news.mobfeed.co.kr##.hideBtn
+interfootball.co.kr##.wing-banner
+interfootball.co.kr##.ad-template
+asiae.co.kr##.sns_area
+asiae.co.kr##.youtube_wrap
+bbc.com##.css-n7zdg2
+busan.com##div.banner_img
+hypebeast.kr##.active
+newspic.kr##.banner_view
+! hankyung
+hankyung.com##.banner-area
+hankyung.com##.promotion-floating2
+static.hankyung.com##.pop-wrap
+! newspim
+newspim.com##.ad-box
+||img.newspim.com/m/banner/*$image
+! nocutnews
+nocutnews.co.kr##.slick-slide.nocut
+nocutnews.co.kr##.slick-slide.channel
+nocutnews.co.kr##.slick-slide.rainbow
+! bing, MSN
+bing.com##.header
+bing.com##.ttc_visible
+msn.com##display-ads
+msn.com##.articlePage_bannerAd_wrapper-DS-EntryPoint1-1
+msn.com##article-close-button
+! xportsnews
+xportsnews.com##.in_200_200
+xportsnews.com###r_ad
+xportsnews.com###l_ad
+xportsnews.com##div.ad_wrap
+xportsnews.com##.ad_wrap_list
+xportsnews.com##.ad_1
+xportsnews.com##.ad_2
+xportsnews.com##div:nth-of-type(3)
+! gotit
+gotit.co.kr##center
+gotit.co.kr##.mb-latest-gallery-sponsor
+gotit.co.kr##.td-banner-wrap-full
+gotit.co.kr###menu-item-6167
+gotit.co.kr###menu-item-42453
+gotit.co.kr###menu-item-10126
+! kmib
+||kmib.co.kr/*/*_subscription*
+m.kmib.co.kr##.mbnr_kap
+m.kmib.co.kr##.sns_area
+m.kmib.co.kr##.m_ad
+! hellot
+||www.hellot.net/*banner
+hellot.net##.art_inner_slide
+hellot.net##.com_ban
+! kormedi
+kormedi.com##.widget_better-ads
+kormedi.com##.sidebar-col-ad-right
+kormedi.com##.sidebar-col-ad-left
+! chosun
+||*.health.chosun.com/*banner*
+||health.chosun.com/*banner*.jpg$image
+chosun.com##.box--margin-bottom-sm.flex--align-items-center
+chosun.com##.box--pad-bottom-xl.width--100
+chosun.com##.grid__col--sm-12.visual__image
+chosun.com##.separator-container
+chosun.com##div.box--hidden-md.box--hidden-lg.box--bg-grey-20
+health.chosun.com##.ad_mid_box
+health.chosun.com##.aside_doctor
+health.chosun.com##.aside_hospital
+health.chosun.com##.left_banner
+health.chosun.com##.li_ad
+health.chosun.com##.top_area
+it.chosun.com##.desktop
+it.chosun.com##.inner
+it.chosun.com##.news_letter
+! donga
+donga.com###adbox_zone01
+donga.com###adbox_zone02
+donga.com###adbox_zone03
+donga.com###adbox_zone04
+donga.com###aside_adbox01
+donga.com###aside_adbox02
+donga.com###aside_adbox03
+donga.com###aside_adbox04
+donga.com###banner_slider
+donga.com###right_wingad
+donga.com##.ad
+donga.com##.aside_adzone01
+donga.com##.aside_adzone02
+donga.com##.aside_adzone03
+donga.com##.aside_adzone04
+donga.com##.bann_wrap
+donga.com##.bestview_news
+donga.com##.bottom_ad
+donga.com##.facebook_api
+donga.com##.i-amphtml-unresolved
+donga.com##.promotion_wrap
+donga.com##.today_issue
+donga.com##.viewad_top
+donga.com##div.ad_01
+dongascience.com##.advertise
+! new.sbs
+news.sbs.co.kr##.w_banner
+news.sbs.co.kr###dablewidget_job8QLlW
+! edaily
+||image.edaily.co.kr/images/content/naver*
+edaily.co.kr##.newsletter_area
+content/naver_channel*.jpg$domain=www.edaily.co.kr,image
+! fnnews
+fnnews.com###FbRoot
+fnnews.com###add_view_upHot
+fnnews.com###mb_ad
+fnnews.com##.banner_navch
+fnnews.com##.bnr_evt
+fnnews.com##.pc_add06
+fnnews.com##.pineapple
+! hani
+@@||m.hani.co.kr^
+||adimg.hani.co.kr^
+||img.hani.co.kr/*/*/*/*/event-blanket/*.png^
+hani.co.kr###asideSupport
+hani.co.kr##.ad_top
+hani.co.kr##.bn-promotion
+hani.co.kr##.bn-promotion-support-5st
+hani.co.kr##.bn-support-character
+hani.co.kr##.gudokArea
+hani.co.kr##.hani-friend
+hani.co.kr##.kisa
+hani.co.kr##.mutimedia
+hani.co.kr##.notice-bn
+hani.co.kr##.open
+hani.co.kr##.support-box
+hani.co.kr##.support-btn
+hani.co.kr##.support-header
+! hankookilbo
+||www.hankookilbo.com/*/Default-Image*
+hankookilbo.com##.ad-news-todays
+hankookilbo.com##.naver-banner
+hankookilbo.com##.right-area
+hankookilbo.com##.serial-ad
+hankookilbo.com##.side-ad-box
+hankookilbo.com##.toast-popup
+! inews24
+inews24.com###articleBody > div:nth-of-type(1)
+inews24.com##container > div
+inews24.com##div:nth-of-type(3)
+inews24.com##hr.blank
+inews24.com##hr.h50.blank
+! joins
+@@||cast.imp.joins.com^
+news.joins.com##.sub_branded_contents.rts
+news.joins.com##.sub_innov_lab_temp.sub_innov_lab.rts
+joins.com##.banner
+||images.joins.com/*/talk_ad/*
+! joongang
+joongang.co.kr##.layer_dark_popup
+joongang.co.kr##.plotting_banner
+joongang.co.kr##.sm_hidden.house_banner
+! khan
+khan.co.kr##.ad-area
+khan.co.kr##.left-banner
+khan.co.kr##.wrap_bnr_shortcut
+! mercola
+korean.mercola.com###mid-optin
+korean.mercola.com##.gdpr-wrap
+korean.mercola.com##.narrow-width.content-tag-container
+korean.mercola.com##.top-banner
+! koreatimes
+ad_share$domain=www.koreatimes.com,subdocument
+koreatimes.com##.bn_300x250_3
+koreatimes.com##.sld_kims
+! acrofan
+kr.acrofan.com###topLbanner2
+kr.acrofan.com##.mainSec05Banner
+! mdjournal
+||mdjournal.kr/banner/*
+mdjournal.kr##.html_banner
+mdjournal.kr##.wrap_new_13.auto-p06.auto-article
+! mk
+||img.mk.co.kr/*/banner*
+mk.co.kr###area_banner
+mk.co.kr##div.ad_section
+mk.co.kr##table:nth-of-type(2)
+mk.co.kr##div.reple_box:nth-of-type(3)
+mk.co.kr##div.reple_box:nth-of-type(4)
+mk.co.kr##.banner_bxtop
+mk.co.kr##.bn_newsletter
+! gamezo
+gamezo.co.uk##.adthrive
+gamezo.co.uk##.adthrive-ad
+! mt
+||menu.mt.co.kr/*/*/banner^
+mt.co.kr##.naver_channel_banner_wrap
+mt.co.kr##.adbox
+mt.co.kr##.cardinfo1
+news.imaeil.com##.arl_007
+newsis.com##.banner300
+! nate
+@@||adimg.nate.com^
+nate.com##.SnbNewsBar
+news.nate.com##.googleAd_wrap
+news.nate.com##.sidebar_banner
+news.nate.com###AdIbl
+news.nate.com###bottomAdRect
+! zum
+news.zum.com###layer_wrap
+news.zum.com##.banner-app-view
+news.zum.com###bottom_shopping_box
+! ohmynews
+||ojsimg.ohmynews.com/*/*/*/local_club_btn
+ohmynews.com###scrollTop
+ohmynews.com##.ad_wrap
+ohmynews.com##.arc-bottom-wrap > div > [href]
+ohmynews.com##.faceb
+ohmynews.com##.footer_club
+ohmynews.com##.main_tis_ad
+ohmynews.com##.new_ad1
+ohmynews.com##.new_ad2
+ohmynews.com##.new_ad3
+ohmynews.com##.new_ad4
+ohmynews.com##.new_ad5
+ohmynews.com##.new_ad6
+ohmynews.com##.new_ad7
+ohmynews.com##.new_ad8
+ohmynews.com##.support-box
+ohmynews.com##.support-omn
+! rpm9
+rpm9.com##.ad_right120x600
+rpm9.com##div.ad_right300
+rpm9.com##div.ad_right300x250
+! sedaily
+sedaily.com##.banner_right
+sedaily.com##.read_newsletter
+sedaily.com##.seo_special
+sedaily.com##.today_cube
+! seoul
+seoul.co.kr###newsletterPop
+seoul.co.kr###slick_banner
+sports.chosun.com##.hoseBn
+! wikitree
+wikitree.co.kr##.clearfix
+wikitree.co.kr##.wikitree_tv
+wikitree.co.kr##div.content_right_inner:nth-of-type(1)
+! yna
+yna.co.kr###marketingPlayer
+yna.co.kr##.wrap-header01
+ytn.co.kr##.YTN_CSA_newsletter
+ytn.co.kr##.newsletter
+ytn.co.kr##.top_banner
+! zdnet
+zdnet.co.kr##.webinar
+! wikitree
+wikitree.co.kr##.section_col_ban
+wikitree.co.kr##section.container.section:nth-of-type(5)
