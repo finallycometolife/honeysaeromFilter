@@ -24,6 +24,7 @@
 @@||s2.gifyu.com
 @@||s10.gifyu.com
 @@||imgur.io
+@@||img.theqoo.net/proxy/$important
 !
 m.fmkorea.com##div[style='margin:-5px 0 0; max-width:100%; overflow-x:scroll; overflow-y:hidden;']
 ||naverwebtoon-phinf.pstatic.net^
