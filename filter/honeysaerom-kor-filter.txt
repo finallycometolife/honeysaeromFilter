@@ -3,7 +3,7 @@
 ! Description: 대한민국 사이트 위주 광고 차단 필터 Korean Sites Filter that whitelist, anti adblock, etc.
 ! Homepage: https://github.com/finallycometolife
 ! License: 
-! Last modified: 2023-04-02
+! Last modified: 2023-04-05
 
 ! [Anti-Adblock Rules + Adblock Rules]
 @@||cdn.011st.com^$domain=m.11st.co.kr
@@ -136,7 +136,7 @@ m.naver.com##.MM_CHANNEL_BOTTOM_BANNER
 @@||aem-collector.daumkakao.io^
 @@||www.tistory.com^
 @@||s1.daumcdn.net^
-@@||t1.daumcdn.net^
+@@||t1.daumcdn.net^$important,document
 @@||1boon.daum.net^
 @@||mud-kage.kakaocdn.net^$app=com.kakao.talk
 @@||[2404:4600:4:44:203:217:229:218]:10009^
