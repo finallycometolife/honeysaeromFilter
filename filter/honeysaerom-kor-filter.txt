@@ -26,9 +26,6 @@
 @@||imgur.io
 @@||img.theqoo.net/proxy/$important
 @@||media.fmkorea.com^$important,document
-@@||image5jvqbd.fmkorea.com
-@@||media.fmkorea.com
-@@||livealert.fmkorea.com
 !
 m.fmkorea.com##div[style='margin:-5px 0 0; max-width:100%; overflow-x:scroll; overflow-y:hidden;']
 ||naverwebtoon-phinf.pstatic.net^
