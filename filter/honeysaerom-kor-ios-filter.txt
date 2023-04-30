@@ -1,0 +1,22 @@
+!
+! Title: honeysaerom kor ios filter
+! Description: 대한민국 사이트 위주 ios 광고 차단 필터 Korean Sites Filter that whitelist, anti adblock, etc for ios
+! Homepage: https://github.com/finallycometolife
+! License: 
+! Last modified: 2023-04-30
+
+!
+@@||live.staticflickr.com^$domain=bbobbobbo.tistory.com
+@@||t1.daumcdn.net^$domain=bbobbobbo.tistory.com
+@@||www.icloud.com^$important,document
+@@||www.adobe.com^$important,document
+@@||weverse.io^$important,document
+@@||us.account.samsung.com^$important,document
+@@||www.notion.so^$important,document
+@@||ezgif.com^$important,document
+@@||music.apple.com^$important,document
+@@||s2.gifyu.com
+@@||s10.gifyu.com
+@@||imgur.io
+@@||i.imgur.com
+@@||img.theqoo.net/proxy/$important
