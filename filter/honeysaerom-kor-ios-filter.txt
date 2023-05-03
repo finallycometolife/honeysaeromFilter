@@ -20,3 +20,12 @@
 @@||imgur.io
 @@||i.imgur.com
 @@||img.theqoo.net/proxy/$important
+!
+@@||gall.dcinside.com^$important,document
+@@||dcimg2.dcinside.co.kr
+@@||dcimg3.dcinside.co.kr
+@@||dcimg5.dcinside.com
+@@||dcimg6.dcinside.co.kr
+@@||dcimg7.dcinside.co.kr
+@@||dcimg8.dcinsdie.co.kr
+@@||dccdn11.dcinside.co.kr
