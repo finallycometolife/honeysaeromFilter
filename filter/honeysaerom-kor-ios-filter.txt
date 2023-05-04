@@ -20,6 +20,7 @@
 @@||imgur.io
 @@||i.imgur.com
 @@||img.theqoo.net/proxy/$important
+@@||www.nike.com/kr/launch
 !
 @@||gall.dcinside.com^$important,document
 @@||dcimg2.dcinside.co.kr
