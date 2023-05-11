@@ -21,6 +21,7 @@
 @@||ezgif.com^$important,document
 @@||openai.com^$important,document
 @@||music.apple.com^$important,document
+@@||drive.google.com^$important,document
 @@||s2.gifyu.com
 @@||s10.gifyu.com
 @@||imgur.io
