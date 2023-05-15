@@ -5,7 +5,27 @@
 ! License: 
 ! Last modified: 2023-02-07
 
-! [KaKao, Daum Service]
+!------------------------------!
+!----- Twitter Faster DNS -----!
+!------------------------------!
+! 104.76.97.12 pbs.twimg.com
+! 104.76.97.13 video.twimg.com
+104.76.97.12 pbs.twimg.com
+104.76.97.13 video.twimg.com
+!
+!
+!----------------------------!
+!----- Twitch P2P Block -----!
+!----------------------------!
+||backend.dna-delivery.com$all,domain=twitch.tv
+||static.twitchcdn.net/assets/streamroot.streamrooter-*.js$script,domain=www.twitch.tv
+twitch.tv#%#//scriptlet("nowebrtc")
+twitch.tv##+js(nowebrtc)
+!
+!
+!------------------------!
+!----- KAKAO & DAUM -----!
+!------------------------!
 @@||aem-collector.daumkakao.io^
 @@||stat.tiara.kakao.com^
 @@||stat.tiara.daum.net^
@@ -29,8 +49,11 @@
 ||ka.*.daum.net^
 ||tr.*.daum.net^
 ||vads-api.daumkakao.com^
-
-! [Google]
+!
+!
+!------------------------!
+!----- Google Sites -----!
+!------------------------!
 @@||lh3.googleusercontent.com^
 @@||tpc.googlesyndication.com^
 !
@@ -48,8 +71,11 @@
 ||googleads.g.doubleclick.net^
 ||pagead.*.google.com^
 ||partnerad.*.google.com^
-
-! [Samsung Game Optimized System]
+!
+!
+!----------------------!
+!----- Galaxy GOS -----!
+!----------------------!
 @@||*.ospserver.net^
 @@||*.samsungdm.com^
 !
@@ -57,8 +83,11 @@
 ||samsung-gamelauncher.com^
 ||gos-api.gos-gsp.io^
 ||gos-gsp.io^
-
-! [Naver]
+!
+!
+!-----------------!
+!----- NAVER -----!
+!-----------------!
 @@||*.nil.naver.com^
 @@||l.m.naver.com^
 @@||lcs.naver.com^
@@ -77,8 +106,11 @@
 ||tivan.naver.com^
 ||tvetamovie.pstatic.net^
 ||mts.naver.com^
-
-! [Extra]
+!
+!
+!-----------------------!
+!----- Extra Sites -----!
+!-----------------------!
 ||g.galleryapi.micloud.xiaomi.net^
 ||us.find.api.micloud.xiaomi.net^
 ||i.mi.com^
