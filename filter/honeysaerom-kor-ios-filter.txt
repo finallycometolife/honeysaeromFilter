@@ -6,22 +6,9 @@
 ! Last modified: 2023-05-03
 
 
-!------------------------------!
-!----- Twitter Faster DNS -----!
-!------------------------------!
-! 104.76.97.12 pbs.twimg.com
-! 104.76.97.13 video.twimg.com
-!
-!
-!----------------------------!
-!----- Twitch P2P Block -----!
-!----------------------------!
-||backend.dna-delivery.com$all,domain=twitch.tv
-||static.twitchcdn.net/assets/streamroot.streamrooter-*.js$script,domain=www.twitch.tv
-twitch.tv#%#//scriptlet("nowebrtc")
-twitch.tv##+js(nowebrtc)
-!
-!
+
+
+
 !---------------------!
 !----- Whitelist -----!
 !---------------------!
