@@ -5,22 +5,10 @@
 ! License: 
 ! Last modified: 2023-05-15
 
-!------------------------------!
-!----- Twitter Faster DNS -----!
-!------------------------------!
-! 104.76.97.12 pbs.twimg.com
-! 104.76.97.13 video.twimg.com
-!
-!
-!----------------------------!
-!----- Twitch P2P Block -----!
-!----------------------------!
-||backend.dna-delivery.com$all,domain=twitch.tv
-||static.twitchcdn.net/assets/streamroot.streamrooter-*.js$script,domain=www.twitch.tv
-twitch.tv#%#//scriptlet("nowebrtc")
-twitch.tv##+js(nowebrtc)
-!
-!
+
+
+
+
 !--------------------------------!
 !----- Whitelist & Denylist -----!
 !--------------------------------!
@@ -48,9 +36,6 @@ twitch.tv##+js(nowebrtc)
 @@||nike.com/kr/launch
 @@||unite.nike.com^$domain=nike.com
 @@||api.nike.com^$domain=nike.com
-@@||applovin.com^$app=com.dubox.drive
-@@||launches.appsflyer.com^$app=com.dubox.drive
-@@||pangle-b.io^$app=com.dubox.drive
 !
 m.fmkorea.com##div[style='margin:-5px 0 0; max-width:100%; overflow-x:scroll; overflow-y:hidden;']
 ||naverwebtoon-phinf.pstatic.net^
