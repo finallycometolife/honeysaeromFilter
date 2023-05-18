@@ -48,6 +48,9 @@ twitch.tv##+js(nowebrtc)
 @@||nike.com/kr/launch
 @@||unite.nike.com^$domain=nike.com
 @@||api.nike.com^$domain=nike.com
+@@||applovin.com^$app=com.dubox.drive
+@@||launches.appsflyer.com^$app=com.dubox.drive
+@@||pangle-b.io^$app=com.dubox.drive
 !
 m.fmkorea.com##div[style='margin:-5px 0 0; max-width:100%; overflow-x:scroll; overflow-y:hidden;']
 ||naverwebtoon-phinf.pstatic.net^
