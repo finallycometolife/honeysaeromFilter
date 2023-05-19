@@ -75,6 +75,8 @@ m.fmkorea.com##div[style='margin:-5px 0 0; max-width:100%; overflow-x:scroll; ov
 @@||dcid.dcinside.com^$app=com.naver.whale
 @@||nstatic.dcinside.com^$app=com.naver.whale
 @@||wstatic.dcinside.com^$app=com.naver.whale
+# @@||dccdn11.xcache.kinxcdn.com
+# @@||addc.dcinside.com
 !
 dcinside.com##.block-disable
 gall.dcinside.com##.kakao_ad_area
