@@ -38,3 +38,5 @@
 @@||dcimg7.dcinside.co.kr
 @@||dcimg8.dcinsdie.co.kr
 @@||dccdn11.dcinside.co.kr
+# @@||dccdn11.xcache.kinxcdn.com
+# @@||addc.dcinside.com
