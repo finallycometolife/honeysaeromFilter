@@ -3,7 +3,7 @@
 ! Description: 대한민국 사이트 위주 광고 차단 필터
 ! Homepage: https://github.com/finallycometolife
 ! License: 
-! Last modified: 2023-05-15
+! Last modified: 2023-05-22
 
 
 
@@ -109,6 +109,7 @@ gall.dcinside.com##tr.ub-content:nth-of-type(1)
 @@||nid.naver.com^
 @@||s.pstatic.net^
 @@||sp.naver.com^
+@@||common.like.naver.com^
 @@||ssl.pstatic.net^
 !
 ||*.ad.naver.com^$important
@@ -134,15 +135,21 @@ news.naver.com##.ad_box
 news.naver.com##.banner
 news.naver.com##.media_end_linked_more
 news.naver.com##.more_news2
+premium.naver.com##.bottom_layer
 nid.naver.com##.banner_wrap
 nid.naver.com##.floating.container
 naver.com###HOME_AD
 naver.com###timesquare
 naver.com##._MM_HOME_PROMOTION_PROMOTION
+naver.com##.comp_banner
 naver.com##.id_comp_anniversary_banner.grid1
 naver.com##.id_comp_commemoration_banner.ISSUE-BANNER-AD.grid1
 naver.com##.id_comp_napp_banner.grid1
 m.naver.com##.id_cui_banner_nextmain
+naver.com##.st_show._tutorial_wrap.section_tutorial
+naver.com##.nplus_wrap
+nid.naver.com##.banner_wrap
+nid.naver.com##.floating.container
 m.naver.com##.layer_alert
 m.naver.com##.MM_NEWS_CHANNEL_PROMOTION_TOP_BANNER
 m.naver.com##.ly_change_newmain
@@ -151,11 +158,46 @@ m.naver.com##.MM_CHANNEL_BOTTOM_BANNER
 !
 !
 !------------------------!
+!------ Naver Cafe ------!
+!------------------------!
+@@||cafeptthumb-phinf.pstatic.net^$image,domain=cafe.naver.com
+@@||ipada.cafe.naver.com^
+blog.naver.com##.btm_banner
+cafe.naver.com##.ad_area.AsideAdvert
+cafe.naver.com##.ArticleFormBanner
+cafe.naver.com##.banner_inner
+cafe.naver.com##.botton.banner_add
+cafe.naver.com##.box_notice
+cafe.naver.com##.cafe_banner
+cafe.naver.com##.CafeAppBanner
+cafe.naver.com##.FormNoticeContent
+cafe.naver.com##.home_editors
+cafe.naver.com##.home_section_promotion
+cafe.naver.com##.link_area.AsideLink
+cafe.naver.com##.location.home_section
+cafe.naver.com##.notice_area.AsideNotice
+cafe.naver.com##.smart_bot_area.AsideSmartBot
+comic.naver.com###mflickAd
+comic.naver.com##.ads_sc
+comic.naver.com##.cont_app_banner
+comic.naver.com##.item_banner
+comic.naver.com$@$div[id="ppl_default_section"]
+map.naver.com##.ng-trigger-fadeInWrap.notice_wrap
+map.naver.com##.ng-trigger-promotionToggleEffect
+map.naver.com##around-contents-card
+shopping.naver.com##.aside_aside__BUKDo
+shopping.naver.com##.banners_banner_area__1OxCJ
+shopping.naver.com##.banners_banner_area__t3hFI
+talk.naver.com##._marketingMessage
+!
+!
+!------------------------!
 !----- KAKAO & DAUM -----!
 !------------------------!
 @@||*.tiara.kakao.com^
 @@||*.tiara.daum.net^
 @@||kauth.kakao.com^
+@@||mud-kage.kakaocdn.net^
 @@||search1.daumcdn.net^$app=com.kakao.talk
 @@||videoads.kakao.com^
 @@||videostats.kakao.com^$app=com.kakao.talk
@@ -210,3 +252,28 @@ play.afreecatv.com##.adshop_layer
 ||vod-player001.afreecatv.com^
 ||vod-player002.afreecatv.com^
 ||vod-player003.afreecatv.com^
+!
+!
+!----------------------!
+!------- Xiaomi -------!
+!----------------------!
+||142.250.206.202:443^
+||142.250.206.234:443^
+||172.217.25.170:443^
+||172.217.161.234:443^
+||172.217.161.202:443^
+||142.250.207.106:443^
+||142.250.76.138:443^
+||31.13.76.35:443^
+||161.117.98.244:443^
+||47.241.24.207:80^
+!
+!
+!----------------------!
+!-------- bing --------!
+!----------------------!
+bing.com##.header
+bing.com##.ttc_visible
+msn.com##display-ads
+msn.com##.articlePage_bannerAd_wrapper-DS-EntryPoint1-1
+msn.com##article-close-button
