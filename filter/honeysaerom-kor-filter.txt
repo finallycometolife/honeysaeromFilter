@@ -3,7 +3,7 @@
 ! Description: 대한민국 사이트 위주 광고 차단 필터
 ! Homepage: https://github.com/finallycometolife
 ! License: 
-! Last modified: 2023-05-23
+! Last modified: 2023-05-26
 
 
 
@@ -123,7 +123,6 @@ gall.dcinside.com##tr.ub-content:nth-of-type(1)
 ||m.searchad.naver.com^
 ||searchad.naver.com^
 ||service.whale.naver.com^
-||tivan.naver.com^
 ||veta.naver.com/fxshow$subdocument
 premium.naver.com##.bottom_layer
 news.naver.com##._da_banner
