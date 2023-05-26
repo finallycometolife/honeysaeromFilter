@@ -3,7 +3,7 @@
 ! Description: 대한민국 사이트 위주 광고 차단 필터
 ! Homepage: https://github.com/finallycometolife
 ! License: 
-! Last modified: 2023-05-26
+! Last modified: 2023-05-26 20:51
 
 
 
@@ -36,6 +36,8 @@
 @@||nike.com/kr/launch
 @@||unite.nike.com^$domain=nike.com
 @@||api.nike.com^$domain=nike.com
+@@||dcinside.co.kr/viewmovie.php^$stealth
+@@||dcinside.co.kr/viewimage.php^$stealth
 !
 m.fmkorea.com##div[style='margin:-5px 0 0; max-width:100%; overflow-x:scroll; overflow-y:hidden;']
 ||naverwebtoon-phinf.pstatic.net^
@@ -273,3 +275,32 @@ bing.com##.ttc_visible
 msn.com##display-ads
 msn.com##.articlePage_bannerAd_wrapper-DS-EntryPoint1-1
 msn.com##article-close-button
+! 
+!
+!---------------------!
+!-------- ETC --------!
+!---------------------!
+manatoki/[0-9]/.net###main-banner-view
+manatoki/[0-9]/.net###thjluipeqmdgsknrof
+manatoki/[0-9]/.net###id_mbv
+manatoki/[0-9]/.net###dgulmvfxpocetbrnwkhiqjs
+manatoki/[0-9]/.net###skhrutgjpfnioqlm
+newtoki/[0-9]/.com###main-banner-view
+newtoki/[0-9]/.com###\37 3a3309060mbb10baaaac8
+tkor./[a-z]/##div.section.mobile-banner.top_hr:nth-child(11) > div.container:first-child > div.row:first-child > div.col-md-12.mobile-banner
+tkor./[a-z]/###banner_21_img
+tkor./[a-z]/###thema_wrapper > div.wrapper.boxed > div > div.at-content > div.view-wrap:nth-child(5) > div.contents.panel.panel-default.view-head.no-attach.content-zoom:last-child > div.bn.bnt:nth-child(12)
+tkor./[a-z]/###thema_wrapper > div.wrapper.boxed > div > div.at-content > div.view-wrap:nth-child(5) > div.contents.panel.panel-default.view-head.no-attach.content-zoom:last-child > div.text-center.visible-xs:last-child
+tkor./[a-z]/##div.section.mobile-banner.top_hr:nth-child(9) > div.container:first-child > div.row:first-child > div.col-md-12.mobile-banner:nth-child(2)
+tkor./[a-z]/###thema_wrapper > div.wrapper.boxed > div > div.at-content > div.view-wrap:nth-child(4) > div.contents.panel.panel-default.view-head.no-attach.content-zoom:last-child > div:nth-child(3)
+tkor./[a-z]/###thema_wrapper > div.wrapper.boxed > div > div.at-content > div.view-wrap:nth-child(4) > div.contents.panel.panel-default.view-head.no-attach.content-zoom:last-child > div.bn.bnt:nth-child(10)
+tkor./[a-z]/##div.section.mobile-banner.top_hr:nth-child(11) > div.container:first-child > div.row:first-child > div.col-md-12.mobile-banner:nth-child(2)
+tkor./[a-z]/###thema_wrapper > div.wrapper.boxed > div > div.at-content > div.view-wrap:nth-child(5) > div.contents.panel.panel-default.view-head.no-attach.content-zoom:last-child > a:nth-child(4)
+! 104.76.97.12 pbs.twimg.com
+! 104.76.97.13 video.twimg.com
+||backend.dna-delivery.com$all,domain=twitch.tv
+||static.twitchcdn.net/assets/streamroot.streamrooter-*.js$script,domain=www.twitch.tv
+twitch.tv#%#//scriptlet("nowebrtc")
+twitch.tv##+js(nowebrtc)
+news.naver.com##div.comp_news_ad
+n.news.naver.com###_MODAL_LAYER_FOR_UNSUBSCRIBER_PROMOTION
