@@ -296,8 +296,6 @@ tkor./[a-z]/###thema_wrapper > div.wrapper.boxed > div > div.at-content > div.vi
 tkor./[a-z]/###thema_wrapper > div.wrapper.boxed > div > div.at-content > div.view-wrap:nth-child(4) > div.contents.panel.panel-default.view-head.no-attach.content-zoom:last-child > div.bn.bnt:nth-child(10)
 tkor./[a-z]/##div.section.mobile-banner.top_hr:nth-child(11) > div.container:first-child > div.row:first-child > div.col-md-12.mobile-banner:nth-child(2)
 tkor./[a-z]/###thema_wrapper > div.wrapper.boxed > div > div.at-content > div.view-wrap:nth-child(5) > div.contents.panel.panel-default.view-head.no-attach.content-zoom:last-child > a:nth-child(4)
-! 104.76.97.12 pbs.twimg.com
-! 104.76.97.13 video.twimg.com
 ||backend.dna-delivery.com$all,domain=twitch.tv
 ||static.twitchcdn.net/assets/streamroot.streamrooter-*.js$script,domain=www.twitch.tv
 twitch.tv#%#//scriptlet("nowebrtc")
