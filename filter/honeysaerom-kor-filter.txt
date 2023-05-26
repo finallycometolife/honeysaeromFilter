@@ -112,7 +112,6 @@ gall.dcinside.com##tr.ub-content:nth-of-type(1)
 !
 ||*.ad.naver.com^$important
 ||*.nbms.naver.com^
-||*.tivan.naver.com^
 ||*.tveta.naver.net^
 ||*.veta.naver.com^
 ||ad.*.naver.com^
