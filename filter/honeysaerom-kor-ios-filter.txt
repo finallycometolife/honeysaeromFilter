@@ -3,7 +3,7 @@
 ! Description: 대한민국 사이트 위주 ios 광고 차단 필터 Korean Sites Filter that whitelist, anti adblock, etc for ios
 ! Homepage: https://github.com/finallycometolife
 ! License: 
-! Last modified: 2023-05-23
+! Last modified: 2023-06-01
 
 
 
@@ -38,3 +38,8 @@
 @@||dcimg7.dcinside.co.kr
 @@||dcimg8.dcinsdie.co.kr
 @@||dccdn11.dcinside.co.kr
+!
+!
+!
+news.naver.com##div.comp_news_ad
+n.news.naver.com###_MODAL_LAYER_FOR_UNSUBSCRIBER_PROMOTION
