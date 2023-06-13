@@ -228,6 +228,7 @@ talk.naver.com##._marketingMessage
 ||t1.daumcdn.net/adfit/*
 ||tr.*.daum.net/*
 ||webid.ad.daum.net^
+||mk.kakaocdn.net/$important,app=com.kakao.talk
 daum.net##.content_ad
 gall.dcinside.com##.kakao_ad_area
 search.daum.net##.log_wide.adLinkColl
