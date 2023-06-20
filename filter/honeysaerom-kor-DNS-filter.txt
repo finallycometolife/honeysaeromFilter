@@ -32,7 +32,6 @@
 ||adserver.*.kakao.com^
 ||daumkakao-smr.smartmediarep.com^
 ||ka.*.daum.net^
-||mk.kakaocdn.net^
 ||tr.*.daum.net^
 ||vads-api.daumkakao.com^
 !
