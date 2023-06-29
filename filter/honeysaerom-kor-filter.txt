@@ -3,7 +3,7 @@
 ! Description: 대한민국 사이트 위주 광고 차단 필터
 ! Homepage: https://github.com/finallycometolife
 ! License: 
-! Last modified: 2023-05-26 20:51
+! Last modified: 2023-06-29 18:41
 
 
 
@@ -18,6 +18,7 @@
 @@||image.fmkorea.com
 @@||live.staticflickr.com^$domain=bbobbobbo.tistory.com
 @@||t1.daumcdn.net^$domain=bbobbobbo.tistory.com
+@@||t1.daumcdn.net/*/subway/*
 @@||www.icloud.com^$important,document
 @@||play.google.com^$important,document
 @@||www.adobe.com^$important,document
