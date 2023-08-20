@@ -16,6 +16,8 @@
 @@||image.fomos.kr/contents/images^$app=com.naver.whale
 @@||lcs.naver.com^$app=com.nhn.android.navercafe
 @@||image.fmkorea.com
+@@||getfile.fmkorea.com
+@@||media.fmkorea.com
 @@||live.staticflickr.com^$domain=bbobbobbo.tistory.com
 @@||t1.daumcdn.net^$domain=bbobbobbo.tistory.com
 @@||t1.daumcdn.net/*/subway/*
