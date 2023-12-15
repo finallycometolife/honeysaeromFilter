@@ -41,6 +41,7 @@
 @@||api.nike.com^$domain=nike.com
 @@||dcinside.co.kr/viewmovie.php^$stealth
 @@||dcinside.co.kr/viewimage.php^$stealth
+@@||yt3.ggpht.com
 !
 m.fmkorea.com##div[style='margin:-5px 0 0; max-width:100%; overflow-x:scroll; overflow-y:hidden;']
 ||naverwebtoon-phinf.pstatic.net^
