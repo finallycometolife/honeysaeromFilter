@@ -30,6 +30,7 @@
 @@||unite.nike.com^$domain=nike.com
 @@||api.nike.com^$domain=nike.com
 @@||yt3.ggpht.com
+@@||116.125.228.58^$important
 !
 @@||gall.dcinside.com^$important,document
 @@||dcimg2.dcinside.co.kr
