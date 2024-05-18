@@ -1,17 +1,7 @@
-더 강력한 코드로 구현하기 위해 다음 사항을 개선할 수 있습니다:
-
-1. **다양한 강조 표시 색상 지원**: 사용자가 다양한 색상을 선택할 수 있도록 합니다.
-2. **로컬 저장소를 이용한 강조 표시 저장**: 페이지 새로고침 후에도 강조 표시가 유지되도록 브라우저의 로컬 저장소에 저장합니다.
-3. **UI 개선**: 강조 표시 색상을 선택할 수 있는 인터페이스를 추가하고, 기존 강조 표시를 관리하는 기능을 개선합니다.
-4. **다양한 텍스트 형식 지원**: 강조 표시된 텍스트의 서식을 유지할 수 있도록 합니다.
-
-다음은 이러한 기능을 포함한 개선된 코드입니다:
-
-```javascript
 // ==UserScript==
 // @name         Advanced TiddlyWiki Highlighter
 // @description  Highlighter that exports to TiddlyWiki with advanced features.
-// @namespace    http://peterhajas.com
+// @namespace    
 // @match        http://*/*
 // @match        https://*/*
 // @connect      *
