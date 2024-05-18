@@ -1,6 +1,6 @@
 // ==UserScript==
-// @name phajas-tiddlywiki-highlighter
-// @description Highlighter that exports to TiddlyWiki.
+// @name -highlighter
+// @description Highlighter 
 // @namespace http://
 // @match http://*/*
 // @match https://*/*
@@ -61,13 +61,14 @@ function updateDownloadButton() {
         out.text += textInRun(run);
         out.text += "\n\n";
     }
+    /*
+    // let string = JSON.stringify(out);
+    // var data = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(out));
+    // let filename = out.title + " .json";
 
-    let string = JSON.stringify(out);
-    var data = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(out));
-    let filename = out.title + " .json";
-
-    dl.setAttribute("href", data);
-    dl.setAttribute("download", filename);
+    // dl.setAttribute("href", data);
+    // dl.setAttribute("download", filename);
+    */
 }
 
 function updateHighlightsList() {
