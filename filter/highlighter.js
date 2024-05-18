@@ -362,11 +362,11 @@ function handleUp(e) {
     setHighlightsEnabled(true);
 }
 
-function setup() {
-    let menu = document.createElement('div');
-    menu.id = 'phajas-highlight-menu';
-    menu.className = 'phajas-highlight-menu';
-    document.body.appendChild(menu);
+//function setup() {
+  //  let menu = document.createElement('div');
+    //menu.id = 'phajas-highlight-menu';
+    //menu.className = 'phajas-highlight-menu';
+    //document.body.appendChild(menu);
 
     function toggleList() {
         document.getElementById('phajas-highlight-list').classList.toggle('phajas-hidden');
