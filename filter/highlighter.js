@@ -362,11 +362,11 @@ function handleUp(e) {
     setHighlightsEnabled(true);
 }
 
-//function setup() {
-  //  let menu = document.createElement('div');
-    //menu.id = 'phajas-highlight-menu';
-    //menu.className = 'phajas-highlight-menu';
-    //document.body.appendChild(menu);
+function setup() {
+    let menu = document.createElement('div');
+    menu.id = 'phajas-highlight-menu';
+    menu.className = 'phajas-highlight-menu';
+    document.body.appendChild(menu);
 
     function toggleList() {
         document.getElementById('phajas-highlight-list').classList.toggle('phajas-hidden');
@@ -394,13 +394,13 @@ function handleUp(e) {
         toggleList();
     };
     menu.appendChild(toggleHighlightListButton);
-
+    /*
     let downloadButton = document.createElement('a');
     downloadButton.id = 'phajas-download';
     downloadButton.className = 'phajas-menu-button';
     downloadButton.innerHTML = "download";
     menu.appendChild(downloadButton);
-
+    */
     let style = `
         .phajas-highlight-menu {
             all: initial;
