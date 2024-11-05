@@ -3,7 +3,7 @@
 // @namespace    https://finallycometolife.github.io
 // @updateURL    https://finallycometolife.github.io/honeysaeromFilter/Userscripts/Simplified-Ad-Shield-Blocker.js
 // @downloadURL  https://finallycometolife.github.io/honeysaeromFilter/Userscripts/Simplified-Ad-Shield-Blocker.js
-// @version      1.4
+// @version      1.5
 // @description  Block AdShield script execution on websites
 // @match        *://*/*
 // @grant        none
@@ -12,7 +12,7 @@
 (function() {
     'use strict';
 
-    // AdShield 변수 및 함수 이름 차단
+    // AdShield 변수 및 함수 이름 차단, 테스트
     ['adshield', 'detectAdblock', 'blockDetected', 'adblock', 'blockAdBlock', 'detectAds', 'adshield_runtime', 
         'ads-recovery', 'blocker-bypass', 'ad-recovery', 'ads-restoration',
         'bypass-adshield', 'recover-ad', 'adblock-bypass', 'adshield-defuser', 'blockad'].forEach(name => {
