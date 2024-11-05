@@ -12,8 +12,7 @@
 !--------------------------------!
 !----- Whitelist & Denylist -----!
 !--------------------------------!
-m.naver.com##div.layer_shopping_tutorial:nth-child(21) > div.lst_wrap
-m.naver.com##div.layer_shopping_tutorial:nth-child(21) > div.lst_wrap > div.lst_tutorial:first-child > div.comp_snap_list.native_scroll
+
 !----------------------------!
 !----- Samsung & Galaxy -----!
 !----------------------------!
