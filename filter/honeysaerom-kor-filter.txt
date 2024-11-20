@@ -10,9 +10,16 @@
 
 
 !--------------------------------!
-!----- Whitelist & Denylist -----!
+!----- Personal Rules -----!
 !--------------------------------!
-
+@@||gmarket.co.kr^$document
+@@||modetour.com^$stealth=dpi
+@@||gmarket.co.kr^$stealth=dpi
+@@||dcimg*.dcinside.co.kr^$stealth
+@@||m.dcinside.com/ajax/*naverad
+@@||platform.twitter.com^$important,app=com.naver.whale
+@@||api.x.com^$important,app=com.naver.whale
+@@||platform.x.com^$important,app=com.naver.whale
 !----------------------------!
 !----- Samsung & Galaxy -----!
 !----------------------------!
