@@ -20,6 +20,10 @@
 @@||platform.twitter.com^$important,app=com.naver.whale
 @@||api.x.com^$important,app=com.naver.whale
 @@||platform.x.com^$important,app=com.naver.whale
+
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=kakaotv.daum.net,third-party
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=tv.kakao.com,third-party
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=play-tv.kakao.com,third-party
 !----------------------------!
 !----- Samsung & Galaxy -----!
 !----------------------------!
