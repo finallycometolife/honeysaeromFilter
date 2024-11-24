@@ -28,7 +28,7 @@
         const span = document.createElement('span');
         span.style.backgroundColor = color;
         span.style.borderRadius = '4px';
-        span.style.padding = '2px'; // Optional: padding for better visibility
+        span.style.padding = '1px'; // Optional: padding for better visibility
 
         // Use a DocumentFragment for safe DOM manipulation
         const fragment = range.cloneContents();
