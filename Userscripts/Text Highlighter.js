@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Text Highlight
 // @namespace    http://tampermonkey.net/
-// @version      1.3
+// @version      1.3.3
 // @description  Unified highlight button and color picker for Firefox compatibility(+ chromium)
 // @updateURL    https://finallycometolife.github.io/honeysaeromFilter/Userscripts/Text Highlighter.js
 // @downloadURL  https://finallycometolife.github.io/honeysaeromFilter/Userscripts/Text Highlighter.js
