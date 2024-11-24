@@ -1,10 +1,8 @@
 // ==UserScript==
-// @name         Text Highlight
+// @name         Syntax Highlighter
 // @namespace    http://tampermonkey.net/
-// @version      1.3.3
-// @description  Unified highlight button and color picker for Firefox compatibility(+ chromium)
-// @updateURL    https://finallycometolife.github.io/honeysaeromFilter/Userscripts/Text Highlighter.js
-// @downloadURL  https://finallycometolife.github.io/honeysaeromFilter/Userscripts/Text Highlighter.js
+// @version      1.4
+// @description  문장, 단어 등 텍스트를 선택하여 하이라이팅 기능을 사용할 수 있는 유저스크립트.
 // @author       finallycometolife
 // @match        *://*/*
 // @grant        none
@@ -14,7 +12,7 @@
 (function () {
     'use strict';
 
-    let highlightUI, iconButton, colorPickerButton, colorPicker;
+    let highlightUI, iconButton, colorPickerButton, colorPicker, colorOptions;
 
     // Function to highlight selected text
     function highlightSelection(color) {
@@ -27,8 +25,8 @@
         // Create a wrapper span element
         const span = document.createElement('span');
         span.style.backgroundColor = color;
-        span.style.borderRadius = '4px';
-        span.style.padding = '0.5px'; // Optional: padding for better visibility
+        span.style.borderRadius = '3px';
+        span.style.padding = '1.5px'; // Optional: padding for better visibility
 
         // Use a DocumentFragment for safe DOM manipulation
         const fragment = range.cloneContents();
@@ -77,44 +75,56 @@
             cursor: 'pointer',
         });
 
-        // Custom icon button for color picker
-        colorPickerButton = document.createElement('button');
-        Object.assign(colorPickerButton.style, {
-            width: '40px',
-            height: '40px',
-            backgroundImage: `url('https://raw.githubusercontent.com/finallycometolife/honeysaeromFilter/refs/heads/main/color-selection.png')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            border: 'none',
-            borderRadius: '20px',
-            cursor: 'pointer',
-        });
-
-        // Hidden color picker
+        // Hidden color picker (fallback)
         colorPicker = document.createElement('input');
         colorPicker.type = 'color';
-        colorPicker.value = '#FFD1D1'; // Default color
+        colorPicker.value = '#FFD1D1'; // Default fallback color
         Object.assign(colorPicker.style, {
             display: 'none', // Hidden by default
         });
 
+        // Color options (default and new colors)
+        colorOptions = document.createElement('div');
+        Object.assign(colorOptions.style, {
+            display: 'flex',
+            gap: '10px',
+        });
+
+        // Create color option buttons
+        const colors = ['#FFD1D1', '#D1E8FF', '#FFFF52'];
+        colors.forEach((color) => {
+            const colorButton = document.createElement('button');
+            Object.assign(colorButton.style, {
+                width: '30px',
+                height: '30px',
+                backgroundColor: color,
+                border: 'none',
+                borderRadius: '15px',
+                cursor: 'pointer',
+                boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
+            });
+
+            // Apply the selected color when clicked
+            colorButton.addEventListener('click', () => {
+                highlightSelection(color);
+            });
+
+            colorOptions.appendChild(colorButton);
+        });
+
         // Append elements to UI
         highlightUI.appendChild(iconButton);
-        highlightUI.appendChild(colorPickerButton);
+        highlightUI.appendChild(colorOptions);
         highlightUI.appendChild(colorPicker);
         document.body.appendChild(highlightUI);
 
         // Add event listeners
         iconButton.addEventListener('click', () => {
-            highlightSelection(colorPicker.value);
-        });
-
-        colorPickerButton.addEventListener('click', () => {
             colorPicker.click();
         });
 
         colorPicker.addEventListener('input', () => {
-            colorPickerButton.style.borderColor = colorPicker.value; // Optional: Show selected color
+            highlightSelection(colorPicker.value);
         });
     }
 
