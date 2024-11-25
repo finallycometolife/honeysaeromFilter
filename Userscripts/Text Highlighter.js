@@ -1,8 +1,10 @@
 // ==UserScript==
 // @name         Syntax Highlighter
 // @namespace    http://tampermonkey.net/
-// @version      1.4
+// @version      1.4.1
 // @description  문장, 단어 등 텍스트를 선택하여 하이라이팅 기능을 사용할 수 있는 유저스크립트.
+// @updateURL    https://finallycometolife.github.io/honeysaeromFilter/Userscripts/Text Highlighter.js
+// @downloadURL  https://finallycometolife.github.io/honeysaeromFilter/Userscripts/Text Highlighter.js
 // @author       finallycometolife
 // @match        *://*/*
 // @grant        none
