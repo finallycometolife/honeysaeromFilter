@@ -2,7 +2,7 @@
 // @name         Syntax Highlighter for iOS
 // @namespace    http://tampermonkey.net/
 // @version      1.6.0
-// @description  모바일 Safari에서 완벽히 작동하고 심미성을 개선한 텍스트 하이라이터.
+// @description  모바일 Safari 및 Mac Safari에서 작동하고 심미성을 개선한 텍스트 하이라이터.
 // @updateURL    https://finallycometolife.github.io/honeysaeromFilter/Userscripts/Text Highlighter for iOS.js
 // @downloadURL  https://finallycometolife.github.io/honeysaeromFilter/Userscripts/Text Highlighter for iOS.js
 // @author       finallycometolife
@@ -14,7 +14,7 @@
 (function () {
     'use strict';
 
-    let highlightUI, selectedRange, colorOptions, debounceTimer;
+    let highlightUI, selectedRange, colorOptions;
 
     // Highlight selected text with the given color
     function highlightSelection(color) {
@@ -26,7 +26,7 @@
         const span = document.createElement('span');
         span.style.backgroundColor = color;
         span.style.borderRadius = '3px';
-        span.style.padding = '0.5px'; // Optional: small padding for visibility
+        span.style.padding = '1px';
 
         // Clone the selected content and wrap it in the span
         const fragment = selectedRange.cloneContents();
@@ -49,8 +49,8 @@
             position: 'absolute',
             display: 'none',
             flexDirection: 'row',
-            gap: '15px', // Adjusted spacing between buttons
-            padding: '8px',
+            gap: '15px', // 넓은 간격으로 조정
+            padding: '10px',
             backgroundColor: 'white',
             border: '1px solid #ddd',
             borderRadius: '12px',
@@ -64,21 +64,13 @@
         colors.forEach((color) => {
             const colorButton = document.createElement('button');
             Object.assign(colorButton.style, {
-                width: '25px', // Reduced size
-                height: '25px', // Reduced size
+                width: '30px',
+                height: '30px',
                 backgroundColor: color,
                 border: 'none',
                 borderRadius: '50%',
                 cursor: 'pointer',
                 boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
-                transition: 'transform 0.2s ease', // Hover animation
-            });
-
-            colorButton.addEventListener('mouseover', () => {
-                colorButton.style.transform = 'scale(1.2)';
-            });
-            colorButton.addEventListener('mouseout', () => {
-                colorButton.style.transform = 'scale(1)';
             });
 
             colorButton.addEventListener('click', () => {
@@ -94,8 +86,8 @@
 
     // Show the UI near the selected text
     function showHighlightUI(x, y) {
-        highlightUI.style.left = `${Math.max(x, 10)}px`;
-        highlightUI.style.top = `${Math.max(y, 10)}px`;
+        highlightUI.style.left = `${x}px`;
+        highlightUI.style.top = `${y}px`;
         highlightUI.style.display = 'flex';
     }
 
@@ -106,25 +98,22 @@
 
     // Handle text selection and save the selected range
     function handleSelection() {
-        clearTimeout(debounceTimer);
-        debounceTimer = setTimeout(() => {
-            const selection = window.getSelection();
-            if (selection.rangeCount > 0 && selection.toString().trim().length > 0) {
-                selectedRange = selection.getRangeAt(0);
+        const selection = window.getSelection();
+        if (selection.rangeCount > 0 && selection.toString().trim().length > 0) {
+            selectedRange = selection.getRangeAt(0);
 
-                const rect = selectedRange.getBoundingClientRect();
-                showHighlightUI(
-                    window.scrollX + rect.left,
-                    window.scrollY + rect.bottom + 10
-                );
-            } else {
-                selectedRange = null;
-                hideHighlightUI();
-            }
-        }, 150); // Debounce for performance
+            const rect = selectedRange.getBoundingClientRect();
+            const x = window.scrollX + rect.left;
+            const y = window.scrollY + rect.bottom;
+
+            showHighlightUI(x, y + 10); // Adjust position slightly below selection
+        } else {
+            selectedRange = null;
+            hideHighlightUI();
+        }
     }
 
-    // Enable touch-based text selection
+    // Enable touch-based text selection for mobile Safari
     function enableTouchSupport() {
         document.addEventListener('touchend', () => {
             setTimeout(() => handleSelection(), 100); // Delay ensures selection is finalized
@@ -135,15 +124,20 @@
     function init() {
         createHighlightUI();
 
-        // Event listeners
+        // Add selection event listeners
         document.addEventListener('selectionchange', handleSelection);
+
+        // Hide the UI when clicking outside
         document.addEventListener('click', (event) => {
             if (!highlightUI.contains(event.target)) {
                 hideHighlightUI();
             }
         });
 
-        enableTouchSupport(); // Mobile-specific
+        // Enable touch support for mobile Safari
+        if ('ontouchstart' in window) {
+            enableTouchSupport();
+        }
     }
 
     // Run the initialization when DOM is ready
