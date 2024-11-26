@@ -1,10 +1,10 @@
 // ==UserScript==
-// @name         Syntax Highlighter for IOS
+// @name         Syntax Highlighter
 // @namespace    http://tampermonkey.net/
-// @version      2.0.0
-// @description  문장, 단어 등 텍스트를 선택하여 하이라이팅 기능을 사용할 수 있는 유저스크립트 (Safari 호환).
-// @updateURL    https://finallycometolife.github.io/honeysaeromFilter/Userscripts/TextHighlighter_v2.js
-// @downloadURL  https://finallycometolife.github.io/honeysaeromFilter/Userscripts/TextHighlighter_v2.js
+// @version      1.4.2
+// @description  문장, 단어 등 텍스트를 선택하여 하이라이팅 기능을 사용할 수 있는 유저스크립트. 모바일 Safari 호환성 개선.
+// @updateURL    https://finallycometolife.github.io/honeysaeromFilter/Userscripts/Text Highlighter.js
+// @downloadURL  https://finallycometolife.github.io/honeysaeromFilter/Userscripts/Text Highlighter.js
 // @author       finallycometolife
 // @match        *://*/*
 // @grant        none
@@ -14,45 +14,42 @@
 (function () {
     'use strict';
 
-    let highlightUI, iconButton, colorOptions, clearButton, debounceTimer;
+    let highlightUI, iconButton, colorPickerButton, colorPicker, colorOptions;
 
     // Function to highlight selected text
     function highlightSelection(color) {
         const selection = window.getSelection();
+
         if (!selection.rangeCount || selection.toString().trim().length === 0) return;
 
         const range = selection.getRangeAt(0);
+
+        // Create a wrapper span element
         const span = document.createElement('span');
         span.style.backgroundColor = color;
         span.style.borderRadius = '3px';
-        span.style.padding = '1.5px';
+        span.style.padding = '1.5px'; // Optional: padding for better visibility
 
+        // Use a DocumentFragment for safe DOM manipulation
         const fragment = range.cloneContents();
+
+        // Append the cloned content into the new span
         span.appendChild(fragment);
+
+        // Replace the original range content with the span
         range.deleteContents();
         range.insertNode(span);
 
+        // Clear selection after applying highlight
         selection.removeAllRanges();
         hideHighlightUI();
     }
 
-    // Function to clear all highlights
-    function clearHighlights() {
-        const highlights = document.querySelectorAll('span[style*="background-color"]');
-        highlights.forEach((highlight) => {
-            const parent = highlight.parentNode;
-            while (highlight.firstChild) {
-                parent.insertBefore(highlight.firstChild, highlight);
-            }
-            parent.removeChild(highlight);
-        });
-    }
-
-    // Create the highlight UI
+    // Create unified highlight UI
     function createHighlightUI() {
         highlightUI = document.createElement('div');
         Object.assign(highlightUI.style, {
-            position: 'fixed',
+            position: 'absolute', // Use absolute for better compatibility in mobile browsers
             bottom: '20px',
             left: '20px',
             zIndex: '1000',
@@ -67,6 +64,7 @@
             boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
         });
 
+        // Custom icon button for highlight
         iconButton = document.createElement('button');
         Object.assign(iconButton.style, {
             width: '40px',
@@ -77,16 +75,24 @@
             border: 'none',
             borderRadius: '20px',
             cursor: 'pointer',
-            outline: 'none',
         });
-        iconButton.title = 'Select Highlight Color';
 
+        // Hidden color picker (fallback)
+        colorPicker = document.createElement('input');
+        colorPicker.type = 'color';
+        colorPicker.value = '#FFD1D1'; // Default fallback color
+        Object.assign(colorPicker.style, {
+            display: 'none', // Hidden by default
+        });
+
+        // Color options (default and new colors)
         colorOptions = document.createElement('div');
         Object.assign(colorOptions.style, {
             display: 'flex',
             gap: '10px',
         });
 
+        // Create color option buttons
         const colors = ['#FFD1D1', '#D1E8FF', '#FFFF52'];
         colors.forEach((color) => {
             const colorButton = document.createElement('button');
@@ -99,58 +105,71 @@
                 cursor: 'pointer',
                 boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
             });
-            colorButton.title = `Highlight with ${color}`;
-            colorButton.addEventListener('click', () => highlightSelection(color));
+
+            // Apply the selected color when clicked
+            colorButton.addEventListener('click', () => {
+                highlightSelection(color);
+            });
+
             colorOptions.appendChild(colorButton);
         });
 
-        clearButton = document.createElement('button');
-        clearButton.textContent = 'Clear Highlights';
-        Object.assign(clearButton.style, {
-            padding: '5px 10px',
-            border: '1px solid #ddd',
-            borderRadius: '5px',
-            cursor: 'pointer',
-            backgroundColor: '#f5f5f5',
-            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
-        });
-        clearButton.title = 'Remove All Highlights';
-        clearButton.addEventListener('click', clearHighlights);
-
+        // Append elements to UI
         highlightUI.appendChild(iconButton);
         highlightUI.appendChild(colorOptions);
-        highlightUI.appendChild(clearButton);
+        highlightUI.appendChild(colorPicker);
         document.body.appendChild(highlightUI);
+
+        // Add event listeners
+        iconButton.addEventListener('click', () => {
+            colorPicker.click();
+        });
+
+        colorPicker.addEventListener('input', () => {
+            highlightSelection(colorPicker.value);
+        });
     }
 
-    // Show the highlight UI
+    // Show the UI
     function showHighlightUI() {
         highlightUI.style.display = 'flex';
     }
 
-    // Hide the highlight UI
+    // Hide the UI
     function hideHighlightUI() {
         highlightUI.style.display = 'none';
     }
 
-    // Handle text selection
+    // Monitor selection changes
     function handleSelection() {
-        clearTimeout(debounceTimer);
-        debounceTimer = setTimeout(() => {
-            const selection = window.getSelection();
-            if (selection && selection.rangeCount > 0 && selection.toString().trim().length > 0) {
-                showHighlightUI();
-            } else {
-                hideHighlightUI();
-            }
-        }, 100); // Debounce delay for performance
+        const selection = window.getSelection();
+        if (selection && selection.rangeCount > 0 && selection.toString().trim().length > 0) {
+            const range = selection.getRangeAt(0);
+            const rect = range.getBoundingClientRect();
+            highlightUI.style.top = `${window.scrollY + rect.bottom + 10}px`; // Adjust for scrolling
+            highlightUI.style.left = `${window.scrollX + rect.left}px`; // Adjust position dynamically
+            showHighlightUI();
+        } else {
+            hideHighlightUI();
+        }
+    }
+
+    // Ensure script compatibility with Firefox and Safari
+    function ensureCompatibility() {
+        if (typeof window.getSelection !== 'function') {
+            console.warn('Highlight script is not supported in this browser.');
+        }
     }
 
     // Initialize the script
     function init() {
+        ensureCompatibility();
         createHighlightUI();
 
+        // Add selection and click event listeners
         document.addEventListener('selectionchange', handleSelection);
+
+        // Hide UI when clicking outside
         document.addEventListener('click', (event) => {
             if (!highlightUI.contains(event.target)) {
                 hideHighlightUI();
@@ -158,6 +177,7 @@
         });
     }
 
+    // Check if DOM is ready
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {
