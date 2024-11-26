@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Syntax Highlighter for iOS
 // @namespace    http://tampermonkey.net/
-// @version      1.6.1
+// @version      1.6.3
 // @description  모바일 Safari 및 Mac Safari에서 작동하고 심미성을 개선한 텍스트 하이라이터.
 // @updateURL    https://finallycometolife.github.io/honeysaeromFilter/Userscripts/Text Highlighter for iOS.js
 // @downloadURL  https://finallycometolife.github.io/honeysaeromFilter/Userscripts/Text Highlighter for iOS.js
