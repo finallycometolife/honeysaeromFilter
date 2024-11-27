@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Syntax Highlighter for iOS
 // @namespace    http://tampermonkey.net/
-// @version      1.6.3
+// @version      2.0
 // @description  모바일 Safari 및 Mac Safari에서 작동하고 심미성을 개선한 텍스트 하이라이터.
 // @updateURL    https://finallycometolife.github.io/honeysaeromFilter/Userscripts/Text Highlighter for iOS.js
 // @downloadURL  https://finallycometolife.github.io/honeysaeromFilter/Userscripts/Text Highlighter for iOS.js
@@ -15,6 +15,7 @@
     'use strict';
 
     let highlightUI, selectedRange, colorOptions;
+    let ignoreClickEvent = false; // 플래그: 특정 상황에서 click 이벤트 무시
 
     // Highlight selected text with the given color
     function highlightSelection(color) {
@@ -28,15 +29,13 @@
         span.style.borderRadius = '3px';
         span.style.padding = '1px';
 
-        // Clone the selected content and wrap it in the span
-        const fragment = selectedRange.cloneContents();
-        span.appendChild(fragment);
+        try {
+            // Wrap the range contents in the span
+            selectedRange.surroundContents(span);
+        } catch (error) {
+            console.error('Error highlighting selection:', error);
+        }
 
-        // Replace the selected range with the span
-        selectedRange.deleteContents();
-        selectedRange.insertNode(span);
-
-        // Clear the selection and hide the UI
         selectedRange = null;
         window.getSelection().removeAllRanges();
         hideHighlightUI();
@@ -49,12 +48,13 @@
             position: 'absolute',
             display: 'none',
             flexDirection: 'row',
-            gap: '15px', // 넓은 간격으로 조정
+            gap: '15px',
             padding: '10px',
             backgroundColor: 'white',
             border: '1px solid #ddd',
             borderRadius: '12px',
             boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
+            pointerEvents: 'auto',
             zIndex: '1000',
         });
 
@@ -89,6 +89,10 @@
         highlightUI.style.left = `${x}px`;
         highlightUI.style.top = `${y}px`;
         highlightUI.style.display = 'flex';
+        ignoreClickEvent = true; // 클릭 이벤트를 잠시 무시
+        setTimeout(() => {
+            ignoreClickEvent = false; // 500ms 후 클릭 이벤트 활성화
+        }, 500);
     }
 
     // Hide the UI
@@ -96,27 +100,31 @@
         highlightUI.style.display = 'none';
     }
 
-    // Handle text selection and save the selected range
+    // Handle text selection and save the selected range (debounced)
+    let selectionTimeout;
     function handleSelection() {
-        const selection = window.getSelection();
-        if (selection.rangeCount > 0 && selection.toString().trim().length > 0) {
-            selectedRange = selection.getRangeAt(0);
+        clearTimeout(selectionTimeout);
+        selectionTimeout = setTimeout(() => {
+            const selection = window.getSelection();
+            if (selection.rangeCount > 0 && selection.toString().trim().length > 0) {
+                selectedRange = selection.getRangeAt(0);
 
-            const rect = selectedRange.getBoundingClientRect();
-            const x = window.scrollX + rect.left;
-            const y = window.scrollY + rect.bottom;
+                const rect = selectedRange.getBoundingClientRect();
+                const x = window.scrollX + rect.left;
+                const y = window.scrollY + rect.bottom;
 
-            showHighlightUI(x, y + 10); // Adjust position slightly below selection
-        } else {
-            selectedRange = null;
-            hideHighlightUI();
-        }
+                showHighlightUI(x, y + 10); // Adjust position slightly below selection
+            } else {
+                selectedRange = null;
+                hideHighlightUI();
+            }
+        }, 100); // Delay ensures stable selection
     }
 
     // Enable touch-based text selection for mobile Safari
     function enableTouchSupport() {
         document.addEventListener('touchend', () => {
-            setTimeout(() => handleSelection(), 100); // Delay ensures selection is finalized
+            setTimeout(() => handleSelection(), 200); // Increased delay for Safari stability
         });
     }
 
@@ -129,7 +137,7 @@
 
         // Hide the UI when clicking outside
         document.addEventListener('click', (event) => {
-            if (!highlightUI.contains(event.target)) {
+            if (!ignoreClickEvent && !highlightUI.contains(event.target)) {
                 hideHighlightUI();
             }
         });
