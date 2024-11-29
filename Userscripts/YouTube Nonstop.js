@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YouTube Nonstop
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      1.2
 // @description  Prevents the "Video paused. Continue watching?" popup on YouTube
 // @author       finallycometolife
 // @updateURL    https://finallycometolife.github.io/honeysaeromFilter/Userscripts/Youtube Nonstop.js
@@ -25,5 +25,5 @@
     setInterval(() => {
         window.dispatchEvent(new Event('mousemove'));
         document.dispatchEvent(new KeyboardEvent('keydown', { bubbles: true, cancelable: true, key: 'Shift' }));
-    }, 50000); // Trigger every 50 seconds
+    }, 55000); // Trigger every 50 seconds
 })
