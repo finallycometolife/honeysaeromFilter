@@ -4,8 +4,8 @@
 // @version      1.2
 // @description  Prevents the "Video paused. Continue watching?" popup on YouTube
 // @author       finallycometolife
-// @updateURL    https://finallycometolife.github.io/honeysaeromFilter/Userscripts/Youtube Nonstop.js
-// @downloadURL  https://finallycometolife.github.io/honeysaeromFilter/Userscripts/Youtube Nonstop.js
+// @updateURL    https://finallycometolife.github.io/honeysaeromFilter/Userscripts/YouTube Nonstop.js
+// @downloadURL  https://finallycometolife.github.io/honeysaeromFilter/Userscripts/YouTube Nonstop.js
 // @match        *://*.youtube.com/*
 // @run-at       document-start
 // ==/UserScript==
