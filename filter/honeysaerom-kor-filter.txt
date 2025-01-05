@@ -20,6 +20,7 @@
 @@||platform.twitter.com^$important,app=com.naver.whale
 @@||api.x.com^$important,app=com.naver.whale
 @@||platform.x.com^$important,app=com.naver.whale
+m.naver.com##.comp_card:not(.comp_weather)
 !----------------------------!
 !----- Samsung & Galaxy -----!
 !----------------------------!
