@@ -21,6 +21,10 @@
 @@||api.x.com^$important,app=com.naver.whale
 @@||platform.x.com^$important,app=com.naver.whale
 m.naver.com##.comp_card:not(.comp_weather)
+##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; absolute; left: -10000px; top: -"]):not([style="pointer-events: none; height: 1px; width: 0px; opacity: 0; visibility: hidden; bottom: 0px;"])
+##[class^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; absolute; left: -10000px; top: -"])
+#%#//scriptlet('prevent-fetch','pagead2.googlesyndication.com')
+#%#//scriptlet('prevent-xhr','pagead2.googlesyndication.com') 
 !----------------------------!
 !----- Samsung & Galaxy -----!
 !----------------------------!
