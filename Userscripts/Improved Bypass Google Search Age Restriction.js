@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name            Improved Bypass Google Search Age Restriction (Images Only)
 // @namespace       https://finallycometolife.github.io
-// @updateURL        https://finallycometolife.github.io/honeysaeromFilter/Userscripts/Improved Bypass Google Search Age Restriction.js
-// @downloadURL      https://finallycometolife.github.io/honeysaeromFilter/Userscripts/Improved Bypass Google Search Age Restriction.js
+// @updateURL       https://finallycometolife.github.io/honeysaeromFilter/Userscripts/Improved Bypass Google Search Age Restriction.js
+// @downloadURL     https://finallycometolife.github.io/honeysaeromFilter/Userscripts/Improved Bypass Google Search Age Restriction.js
 // @version         2.5
 // @description     Change Google search location and language without excessive redirects (Images Only)
 // @match           *://www.google.com/search*
