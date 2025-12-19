@@ -25,3 +25,4 @@ m.naver.com##.comp_card:not(.comp_weather)
 ##[class^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; absolute; left: -10000px; top: -"])
 #%#//scriptlet('prevent-fetch','pagead2.googlesyndication.com')
 #%#//scriptlet('prevent-xhr','pagead2.googlesyndication.com') 
+m.naver.com##div.chf_feed_card > div.chf_feed_wrap
