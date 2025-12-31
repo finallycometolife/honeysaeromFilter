@@ -30,3 +30,12 @@ doctornow.co.kr##div[class*="sc-"] > div.h-\[280px\].justify-center
 doctornow.co.kr##div[class*="sc-"] > div.aspect-\[360\/160\]
 ! 닥터나우 하단/기타 플로팅 영역
 doctornow.co.kr##div.gap-\[8px\].px-\[24px\].py-\[12px\] > div.relative
+! 닥터나우 상단 헤더 배너 (50px 높이)
+doctornow.co.kr###__next > section > header > div.h-\[50px\].justify-center
+! 닥터나우 특정 컨텐츠 박스 (min-h-140px)
+doctornow.co.kr##div.p-\[20px\] > div.min-h-\[140px\].gap-\[12px\]
+! 닥터나우 특정 박스 영역 (전체 속성 일치)
+doctornow.co.kr##div.p-\[20px\] > div.flex.min-h-\[140px\].flex-col.gap-\[12px\].overflow-hidden.rounded-lg.border.border-gray-200.border-solid.bg-white.p-\[12px\]
+! 닥터나우 특정 박스 영역 (단축 버전 - 디자인 변경 대비)
+doctornow.co.kr##div.p-\[20px\] > div.min-h-\[140px\].gap-\[12px\]
+
