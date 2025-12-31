@@ -21,3 +21,12 @@ m.naver.com##div.chf_feed_card > div.chf_feed_wrap
 ##[class^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; absolute; left: -10000px; top: -"])
 #%#//scriptlet('prevent-fetch','pagead2.googlesyndication.com')
 #%#//scriptlet('prevent-xhr','pagead2.googlesyndication.com')
+
+! 닥터나우 상단 배너 (이미지 비율 3.12)
+doctornow.co.kr##div.relative > img.aspect-\[3\.12\]
+! 닥터나우 중간 광고 영역 (높이 280px)
+doctornow.co.kr##div[class*="sc-"] > div.h-\[280px\].justify-center
+! 닥터나우 중간 광고 영역 (비율 360/160)
+doctornow.co.kr##div[class*="sc-"] > div.aspect-\[360\/160\]
+! 닥터나우 하단/기타 플로팅 영역
+doctornow.co.kr##div.gap-\[8px\].px-\[24px\].py-\[12px\] > div.relative
