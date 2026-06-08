@@ -3,15 +3,8 @@
 ! Description: 대한민국 사이트 위주 광고 차단 필터
 ! Homepage: https://github.com/finallycometolife
 ! License: 
-! Last modified: 2025-04-06 14:54
+! Last modified: 2026-06-08 18:27
 
-
-
-
-
-!--------------------------------!
-!----- Personal Rules -----!
-!--------------------------------!
 @@||gmarket.co.kr^$document
 @@||modetour.com^$stealth=dpi
 @@||gmarket.co.kr^$stealth=dpi
@@ -21,21 +14,32 @@ m.naver.com##div.chf_feed_card > div.chf_feed_wrap
 ##[class^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; absolute; left: -10000px; top: -"])
 #%#//scriptlet('prevent-fetch','pagead2.googlesyndication.com')
 #%#//scriptlet('prevent-xhr','pagead2.googlesyndication.com')
+naver.com##+js(set-cookie, NSCS, 2)
+@@*$removeparam=NaPm,from=msearch.shopping.naver.com|search.shopping.naver.com
+www.google.*##.MjjYud:not(:has([data-id="mosaic"])):has(a[href*=".pt/"])
+www.google.*##.MjjYud:not(:has([data-id="mosaic"])):has(a[href*=".hu/"])
 
-! 닥터나우 상단 배너 (이미지 비율 3.12)
-doctornow.co.kr##div.relative > img.aspect-\[3\.12\]
-! 닥터나우 중간 광고 영역 (높이 280px)
-doctornow.co.kr##div[class*="sc-"] > div.h-\[280px\].justify-center
-! 닥터나우 중간 광고 영역 (비율 360/160)
-doctornow.co.kr##div[class*="sc-"] > div.aspect-\[360\/160\]
-! 닥터나우 하단/기타 플로팅 영역
-doctornow.co.kr##div.gap-\[8px\].px-\[24px\].py-\[12px\] > div.relative
-! 닥터나우 상단 헤더 배너 (50px 높이)
-doctornow.co.kr###__next > section > header > div.h-\[50px\].justify-center
-! 닥터나우 특정 컨텐츠 박스 (min-h-140px)
-doctornow.co.kr##div.p-\[20px\] > div.min-h-\[140px\].gap-\[12px\]
-! 닥터나우 특정 박스 영역 (전체 속성 일치)
-doctornow.co.kr##div.p-\[20px\] > div.flex.min-h-\[140px\].flex-col.gap-\[12px\].overflow-hidden.rounded-lg.border.border-gray-200.border-solid.bg-white.p-\[12px\]
-! 닥터나우 특정 박스 영역 (단축 버전 - 디자인 변경 대비)
-doctornow.co.kr##div.p-\[20px\] > div.min-h-\[140px\].gap-\[12px\]
-
+# namu.wiki
+namu.wiki##ins.adsbygoogle[data-ad-client][data-ad-slot]
+namu.wiki##div:has(> ins.adsbygoogle[data-ad-client][data-ad-slot])
+namu.wiki##iframe[src^="https://googleads.g.doubleclick.net/pagead/ads"]
+namu.wiki##iframe[data-google-query-id]
+namu.wiki#$#div:has(> ins.adsbygoogle[data-ad-client][data-ad-slot]) { display: none !important; height: 0 !important; min-height: 0 !important; margin: 0 !important; padding: 0 !important; }
+namu.wiki##div:has(> div[style*="width:auto"] > table):has(> div[style*="width:auto"] table table):has(> div[style*="width:auto"] a[href^="#s-"])
+namu.wiki#$#div:has(> div[style*="width:auto"] > table):has(> div[style*="width:auto"] table table):has(> div[style*="width:auto"] a[href^="#s-"]) { display: none !important; height: 0 !important; min-height: 0 !important; margin: 0 !important; padding: 0 !important; }
+namu.wiki##div:has(> div[style*="width:auto"] > table > tbody > tr[style*="background-color:#fffaf9"]):has(> div[style*="width:auto"] table table):has(> div[style*="width:auto"] a[href^="#s-"])
+namu.wiki#$#div:has(> div[style*="width:auto"] > table > tbody > tr[style*="background-color:#fffaf9"]):has(> div[style*="width:auto"] table table):has(> div[style*="width:auto"] a[href^="#s-"]) { display: none !important; height: 0 !important; min-height: 0 !important; margin: 0 !important; padding: 0 !important; }
+namu.wiki##div[style*="width: auto"]:has(> table > tbody > tr[style*="background-color: rgb(255, 250, 249)"]):has(> table table):has(a[href^="#s-"])
+namu.wiki#?#div[style*="width: auto"]:has(> table > tbody > tr[style*="background-color: rgb(255, 250, 249)"]):has(> table table):has(a[href^="#s-"]):upward(1)
+namu.wiki##iframe[id^="google_ads_iframe_"]
+namu.wiki##iframe[data-is-safeframe="true"][aria-label="광고"]
+namu.wiki##iframe[src*=".safeframe.googlesyndication.com/safeframe/"]
+namu.wiki##div[id^="google_ads_iframe_"][id$="__container__"]
+namu.wiki##div[data-google-query-id]:has(> div[id^="google_ads_iframe_"][id$="__container__"])
+namu.wiki##div:has(> div[data-google-query-id] > div[id^="google_ads_iframe_"][id$="__container__"])
+||googlesyndication.com/safeframe/$subdocument,domain=namu.wiki
+||safeframe.googlesyndication.com/safeframe/$subdocument,domain=namu.wiki
+namu.wiki##iframe[id^="google_ads_iframe_"]
+namu.wiki##div[id^="google_ads_iframe_"][id$="__container__"]
+namu.wiki#?#div[data-google-query-id]:has(> div[id^="google_ads_iframe_"][id$="__container__"]):upward(2)
+namu.wiki##div:has(> div > div[id]:empty):not(:has(a,img,picture,video,audio,canvas,svg,table,form,input,textarea,select,button))
