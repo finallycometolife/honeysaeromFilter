@@ -3,7 +3,7 @@
 ! Description: 대한민국 사이트 위주 광고 차단 필터
 ! Homepage: https://github.com/finallycometolife
 ! License: 
-! Last modified: 2026-06-08 18:27
+! Last modified: 2026-07-21 11:27
 
 @@||gmarket.co.kr^$document
 @@||modetour.com^$stealth=dpi
@@ -19,27 +19,17 @@ naver.com##+js(set-cookie, NSCS, 2)
 www.google.*##.MjjYud:not(:has([data-id="mosaic"])):has(a[href*=".pt/"])
 www.google.*##.MjjYud:not(:has([data-id="mosaic"])):has(a[href*=".hu/"])
 
-# namu.wiki
-namu.wiki##ins.adsbygoogle[data-ad-client][data-ad-slot]
-namu.wiki##div:has(> ins.adsbygoogle[data-ad-client][data-ad-slot])
-namu.wiki##iframe[src^="https://googleads.g.doubleclick.net/pagead/ads"]
-namu.wiki##iframe[data-google-query-id]
-namu.wiki#$#div:has(> ins.adsbygoogle[data-ad-client][data-ad-slot]) { display: none !important; height: 0 !important; min-height: 0 !important; margin: 0 !important; padding: 0 !important; }
-namu.wiki##div:has(> div[style*="width:auto"] > table):has(> div[style*="width:auto"] table table):has(> div[style*="width:auto"] a[href^="#s-"])
-namu.wiki#$#div:has(> div[style*="width:auto"] > table):has(> div[style*="width:auto"] table table):has(> div[style*="width:auto"] a[href^="#s-"]) { display: none !important; height: 0 !important; min-height: 0 !important; margin: 0 !important; padding: 0 !important; }
-namu.wiki##div:has(> div[style*="width:auto"] > table > tbody > tr[style*="background-color:#fffaf9"]):has(> div[style*="width:auto"] table table):has(> div[style*="width:auto"] a[href^="#s-"])
-namu.wiki#$#div:has(> div[style*="width:auto"] > table > tbody > tr[style*="background-color:#fffaf9"]):has(> div[style*="width:auto"] table table):has(> div[style*="width:auto"] a[href^="#s-"]) { display: none !important; height: 0 !important; min-height: 0 !important; margin: 0 !important; padding: 0 !important; }
-namu.wiki##div[style*="width: auto"]:has(> table > tbody > tr[style*="background-color: rgb(255, 250, 249)"]):has(> table table):has(a[href^="#s-"])
-namu.wiki#?#div[style*="width: auto"]:has(> table > tbody > tr[style*="background-color: rgb(255, 250, 249)"]):has(> table table):has(a[href^="#s-"]):upward(1)
-namu.wiki##iframe[id^="google_ads_iframe_"]
-namu.wiki##iframe[data-is-safeframe="true"][aria-label="광고"]
-namu.wiki##iframe[src*=".safeframe.googlesyndication.com/safeframe/"]
-namu.wiki##div[id^="google_ads_iframe_"][id$="__container__"]
-namu.wiki##div[data-google-query-id]:has(> div[id^="google_ads_iframe_"][id$="__container__"])
-namu.wiki##div:has(> div[data-google-query-id] > div[id^="google_ads_iframe_"][id$="__container__"])
-||googlesyndication.com/safeframe/$subdocument,domain=namu.wiki
-||safeframe.googlesyndication.com/safeframe/$subdocument,domain=namu.wiki
-namu.wiki##iframe[id^="google_ads_iframe_"]
-namu.wiki##div[id^="google_ads_iframe_"][id$="__container__"]
-namu.wiki#?#div[data-google-query-id]:has(> div[id^="google_ads_iframe_"][id$="__container__"]):upward(2)
-namu.wiki##div:has(> div > div[id]:empty):not(:has(a,img,picture,video,audio,canvas,svg,table,form,input,textarea,select,button))
+# artist.mnetplus
+! 쿠키 안내 배너 제거
+artist.mnetplus.world##div[class*="CookieBottomSheet_contentWrapper__"]
+! 쿠키 설정창의 어두운 배경 제거
+artist.mnetplus.world##div[class*="CookieCustomBottomSheet_dim__"]
+! 남아 있는 쿠키 설정 모달/클릭 차단 컨테이너 제거
+artist.mnetplus.world##div[class*="CookieCustomBottomSheet_container__"]
+artist.mnetplus.world##div[class*="CookieCustomBottomSheet_wrapper__"]
+artist.mnetplus.world##div[class*="CookieCustomBottomSheet_contentWrapper__"]
+! 스크롤 잠금 해제
+artist.mnetplus.world##html:style(overflow: auto !important; overscroll-behavior: auto !important;)
+artist.mnetplus.world##body:style(overflow: auto !important; touch-action: auto !important;)
+! 쿠키 관련 투명 레이어가 클릭을 가로채지 못하게 함
+artist.mnetplus.world##div[class*="CookieCustomBottomSheet_"]:style(pointer-events: none !important;)
