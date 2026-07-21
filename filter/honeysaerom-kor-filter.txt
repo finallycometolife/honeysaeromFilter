@@ -20,16 +20,27 @@ www.google.*##.MjjYud:not(:has([data-id="mosaic"])):has(a[href*=".pt/"])
 www.google.*##.MjjYud:not(:has([data-id="mosaic"])):has(a[href*=".hu/"])
 
 # artist.mnetplus
-! 쿠키 안내 배너 제거
+! 쿠키 안내 배너 및 설정 모달 제거
 artist.mnetplus.world##div[class*="CookieBottomSheet_contentWrapper__"]
-! 쿠키 설정창의 어두운 배경 제거
 artist.mnetplus.world##div[class*="CookieCustomBottomSheet_dim__"]
-! 남아 있는 쿠키 설정 모달/클릭 차단 컨테이너 제거
 artist.mnetplus.world##div[class*="CookieCustomBottomSheet_container__"]
 artist.mnetplus.world##div[class*="CookieCustomBottomSheet_wrapper__"]
 artist.mnetplus.world##div[class*="CookieCustomBottomSheet_contentWrapper__"]
-! 스크롤 잠금 해제
-artist.mnetplus.world##html:style(overflow: auto !important; overscroll-behavior: auto !important;)
-artist.mnetplus.world##body:style(overflow: auto !important; touch-action: auto !important;)
-! 쿠키 관련 투명 레이어가 클릭을 가로채지 못하게 함
-artist.mnetplus.world##div[class*="CookieCustomBottomSheet_"]:style(pointer-events: none !important;)
+
+! 쿠키 관련 잔여 레이어 제거
+artist.mnetplus.world##div[class*="CookieCustomBottomSheet_"]
+
+! 브라우저 최외곽 html만 스크롤 담당
+artist.mnetplus.world##html:style(overflow-x: hidden !important; overflow-y: auto !important; width: 100% !important; max-width: none !important; margin: 0 !important; padding: 0 !important; scrollbar-gutter: auto !important; overscroll-behavior: auto !important;)
+
+! body 스크롤 및 모달 잠금 해제
+artist.mnetplus.world##body:style(overflow: visible !important; position: static !important; inset: auto !important; width: 100% !important; min-width: 100% !important; max-width: none !important; height: auto !important; margin: 0 !important; padding: 0 !important; touch-action: auto !important; overscroll-behavior: auto !important;)
+
+! 최상위 앱 컨테이너 폭 및 내부 스크롤 해제
+artist.mnetplus.world##div#__next:style(overflow: visible !important; position: static !important; width: 100% !important; min-width: 100% !important; max-width: none !important; height: auto !important; margin: 0 !important; padding: 0 !important;)
+artist.mnetplus.world##div#root:style(overflow: visible !important; position: static !important; width: 100% !important; min-width: 100% !important; max-width: none !important; height: auto !important; margin: 0 !important; padding: 0 !important;)
+artist.mnetplus.world##body > div:style(overflow: visible !important; width: 100% !important; min-width: 100% !important; max-width: none !important; margin-left: 0 !important; margin-right: 0 !important; padding-left: 0 !important; padding-right: 0 !important;)
+
+! 내부 레이아웃이 별도 스크롤바를 만들지 않도록 처리
+artist.mnetplus.world##main:style(overflow: visible !important; width: 100% !important; max-width: none !important; margin-right: 0 !important; padding-right: 0 !important;)
+artist.mnetplus.world##div[class*="Layout_"]:style(overflow: visible !important; max-width: none !important; margin-right: 0 !important; padding-right: 0 !important;)
